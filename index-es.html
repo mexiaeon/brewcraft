@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guías independientes sobre cafeteras espresso, molinos y mejores equipos para preparar café en casa.">
+<title>Brewcraft — Mejor café empieza en casa</title>
+<style>
+:root{--bg:#f5f2ec;--ink:#20221f;--muted:#77766f;--line:#e4dfd5;--green:#34483b;--green2:#526b58;--cream:#ebe4d8;--white:#fffdfa;--gold:#b58a50}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}.topbar{background:var(--green);color:#f8f5ed;text-align:center;padding:9px 16px;font-size:11px;letter-spacing:.15em;text-transform:uppercase}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:auto;padding:0 28px}.logo{font-family:Georgia,serif;font-size:27px;letter-spacing:.12em;font-weight:700}.logo span{color:var(--gold)}.navlinks{display:flex;gap:30px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#55584f}.navlinks a:hover{color:var(--green2)}.nav-cta{border:1px solid var(--green);padding:12px 17px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.hero{max-width:1180px;margin:0 auto;padding:24px 28px 65px;display:grid;grid-template-columns:1fr 1.04fr;gap:48px;align-items:center}.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green2);font-weight:700}.hero h1{font:normal clamp(44px,6vw,76px)/.99 Georgia,serif;letter-spacing:-.045em;margin:22px 0 20px;max-width:570px}.hero p{color:var(--muted);font-size:15px;line-height:1.8;max-width:440px}.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{display:inline-block;background:var(--green);color:white;padding:15px 21px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--green);cursor:pointer}.btn.secondary{background:transparent;color:var(--green)}.hero-image{min-height:480px;border-radius:3px;position:relative;overflow:hidden;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAwIDkwMCI+CjxkZWZzPgogPGxpbmVhckdyYWRpZW50IGlkPSJ3YWxsIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNlOGRmZDAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNjYmJkYTgiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJzdGVlbCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZjdmOGY1Ii8+PHN0b3Agb2Zmc2V0PSIuMzUiIHN0b3AtY29sb3I9IiM5ZWE2YTEiLz48c3RvcCBvZmZzZXQ9Ii42NSIgc3RvcC1jb2xvcj0iI2U1ZThlMyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzYyNmQ2OCIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9Indvb2QiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzlhNjg0NSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzU1MzkyNyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImN1cCIgeDI9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZmZGY2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjY2ZjOWJkIi8+PC9saW5lYXJHcmFkaWVudD4KIDxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMjIiLz48L2ZpbHRlcj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjd2FsbCkiLz48cmVjdCB4PSIxMDAiIHk9IjAiIHdpZHRoPSIzMzAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjVlZGRmIiBvcGFjaXR5PSIuNiIvPjxwYXRoIGQ9Ik0xMDAgMHY2MDBNNDMwIDB2NjAwIiBzdHJva2U9IiNiOWFkOWIiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjUiLz4KPGVsbGlwc2UgY3g9Ijc0MCIgY3k9Ijc0MCIgcng9IjU1MCIgcnk9IjY1IiBmaWxsPSIjMmIyMTE5IiBvcGFjaXR5PSIuMiIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KPHJlY3QgeT0iNjcwIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIyMzAiIGZpbGw9InVybCgjd29vZCkiLz48cGF0aCBkPSJNMCA3MzBoMTQwME0wIDgxNWgxNDAwIiBzdHJva2U9IiNjMjhkNWYiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjMiLz4KPCEtLSBtYWNoaW5lIGJvZHkgLS0+CjxyZWN0IHg9IjM5MCIgeT0iMjIwIiB3aWR0aD0iNTcwIiBoZWlnaHQ9IjQzMCIgcng9IjI4IiBmaWxsPSJ1cmwoI3N0ZWVsKSIgc3Ryb2tlPSIjNTk2MzVlIiBzdHJva2Utd2lkdGg9IjgiLz4KPHJlY3QgeD0iNDI1IiB5PSIyNTAiIHdpZHRoPSI1MDAiIGhlaWdodD0iODAiIHJ4PSIxMiIgZmlsbD0iIzI2MzEyZCIvPjxyZWN0IHg9IjQ2MCIgeT0iMjY4IiB3aWR0aD0iMTY1IiBoZWlnaHQ9IjQwIiByeD0iNiIgZmlsbD0iI2Q1YzZhOSIvPgo8Y2lyY2xlIGN4PSI4MjUiIGN5PSIyOTAiIHI9IjE3IiBmaWxsPSIjYjc4YTRmIi8+PGNpcmNsZSBjeD0iODc1IiBjeT0iMjkwIiByPSIxNyIgZmlsbD0iI2I3OGE0ZiIvPgo8cmVjdCB4PSI0NzAiIHk9IjM2NSIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiM2OTczNmUiLz48cmVjdCB4PSI1MDAiIHk9IjM4NSIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiNkZmUzZGYiLz4KPHBhdGggZD0iTTY1MCA0MDB2OTVoLTI1djMwaDc1di0zMGgtMjV2LTk1IiBmaWxsPSIjMzAzYTM1Ii8+CjxwYXRoIGQ9Ik03MDAgNTI0YzAgMjgtMTYgNDQtMTYgNDQiIHN0cm9rZT0iIzVjMzMyMCIgc3Ryb2tlLXdpZHRoPSI3IiBmaWxsPSJub25lIi8+CjxyZWN0IHg9IjU2NSIgeT0iNTU1IiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzUwNWI1NSIvPjxwYXRoIGQ9Ik01NzUgNTc1aDIwMGwtMjIgNDhINTk3eiIgZmlsbD0iIzdiODU4MCIvPgo8IS0tIHN0ZWFtIHdhbmQgLS0+CjxwYXRoIGQ9Ik05MDAgNDEwaDQ1djEzNSIgc3Ryb2tlPSIjNzI3ZDc3IiBzdHJva2Utd2lkdGg9IjE3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNOTQ1IDU0NXEtNSAyNiAxMiAzNSIgc3Ryb2tlPSIjZTVlOWU0IiBzdHJva2Utd2lkdGg9IjEyIiBmaWxsPSJub25lIi8+CjwhLS0gZ3JpbmRlciAtLT4KPHJlY3QgeD0iMTAxMCIgeT0iMzY1IiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjI4MCIgcng9IjIyIiBmaWxsPSIjMjgzMzJkIi8+PHJlY3QgeD0iMTAzMCIgeT0iMzAwIiB3aWR0aD0iMTUwIiBoZWlnaHQ9Ijk1IiByeD0iMTgiIGZpbGw9IiM1NzRjM2QiLz48cGF0aCBkPSJNMTA0MiAzMTBoMTI1bC0xOC04MGgtODh6IiBmaWxsPSIjYjlhNjhjIiBvcGFjaXR5PSIuOCIvPjxyZWN0IHg9IjEwNDAiIHk9IjQ0NSIgd2lkdGg9IjEzMCIgaGVpZ2h0PSI5MCIgcng9IjEyIiBmaWxsPSIjNDk1NjRlIi8+PGNpcmNsZSBjeD0iMTEwNSIgY3k9IjQ5MCIgcj0iMjMiIGZpbGw9IiNkNGM1YTYiLz48Y2lyY2xlIGN4PSIxMTA1IiBjeT0iNDkwIiByPSI5IiBmaWxsPSIjM2U0OTNmIi8+CjwhLS0gY3VwIC0tPgo8ZWxsaXBzZSBjeD0iODMwIiBjeT0iNzAwIiByeD0iODMiIHJ5PSIxNiIgZmlsbD0iIzM4MmEyMCIgb3BhY2l0eT0iLjI1Ii8+PHBhdGggZD0iTTc2MCA2MjBoMTMwbC0xMyA5MnEtNTIgMzUtMTA0IDB6IiBmaWxsPSJ1cmwoI2N1cCkiIHN0cm9rZT0iI2E4YTE5NiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZD0iTTg5MCA2NDBxNzAtMTAgNDggNDhxLTEyIDMwLTU2IDIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNkOGQxYzUiIHN0cm9rZS13aWR0aD0iMTgiLz48ZWxsaXBzZSBjeD0iODI1IiBjeT0iNjIzIiByeD0iNjUiIHJ5PSIxMyIgZmlsbD0iIzRiMmQxZCIvPjxlbGxpcHNlIGN4PSI4MjUiIGN5PSI2MjAiIHJ4PSI1MiIgcnk9IjgiIGZpbGw9IiNjMThiNGUiLz4KPCEtLSBiZWFucyAtLT4KPGcgZmlsbD0iIzRhMmMxZCI+PGVsbGlwc2UgY3g9IjI3MCIgY3k9IjcyNSIgcng9IjIwIiByeT0iMTIiIHRyYW5zZm9ybT0icm90YXRlKDI1IDI3MCA3MjUpIi8+PHBhdGggZD0iTTI2MCA3MTVxMTIgMTIgMjAgMjAiIHN0cm9rZT0iI2JkOGI1YiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PGVsbGlwc2UgY3g9IjMxNSIgY3k9IjcwMCIgcng9IjE4IiByeT0iMTEiIHRyYW5zZm9ybT0icm90YXRlKC0yNSAzMTUgNzAwKSIvPjxwYXRoIGQ9Ik0zMDQgNjk0cTEwIDEwIDIwIDE0IiBzdHJva2U9IiNiZDhiNWIiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxlbGxpcHNlIGN4PSIzNTAiIGN5PSI3MzUiIHJ4PSIyMCIgcnk9IjEyIi8+PHBhdGggZD0iTTMzOSA3MjVxMTIgMTIgMjIgMjAiIHN0cm9rZT0iI2JkOGI1YiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PC9nPgo8dGV4dCB4PSI5MCIgeT0iMTE1IiBmb250LWZhbWlseT0iR2VvcmdpYSIgZm9udC1zaXplPSIzNCIgZmlsbD0iIzVjNWE0ZiIgbGV0dGVyLXNwYWNpbmc9IjciPlRIRSBIT01FIEJBUklTVEEgSk9VUk5BTDwvdGV4dD4KPC9zdmc+');background-position:center;background-size:cover}.image-note{position:absolute;bottom:20px;left:20px;background:rgba(250,248,242,.93);padding:14px 17px;font:italic 16px Georgia,serif}.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:70px;padding:22px 20px;color:#67675f;font-size:10px;letter-spacing:.16em;text-transform:uppercase;flex-wrap:wrap}.section{max-width:1180px;margin:auto;padding:76px 28px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}.section h2{font:normal clamp(34px,4vw,48px)/1.05 Georgia,serif;margin:12px 0 0;letter-spacing:-.03em}.section-head p{color:var(--muted);font-size:13px;max-width:330px;line-height:1.7;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--white);border:1px solid var(--line);padding:0 0 23px;transition:transform .2s}.card:hover{transform:translateY(-4px)}.card-img{height:220px;background-size:cover;background-position:center;position:relative}.tag{position:absolute;top:14px;left:14px;background:var(--bg);padding:8px 10px;font-size:9px;letter-spacing:.13em;text-transform:uppercase}.card-body{padding:21px 21px 0}.card h3{font:normal 25px Georgia,serif;margin:8px 0}.card p{font-size:13px;color:var(--muted);line-height:1.7;min-height:43px}.text-link{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--green);font-weight:700;border-bottom:1px solid #aeb9ad;padding-bottom:5px;display:inline-block;margin-top:8px}.feature{background:var(--green);color:#f7f3ea}.feature-inner{max-width:1180px;margin:auto;padding:75px 28px;display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.feature .eyebrow{color:#cbb18a}.feature h2{font:normal clamp(36px,4vw,52px)/1.05 Georgia,serif;margin:15px 0}.feature p{color:#d0d4ca;line-height:1.8;font-size:14px}.feature-image{height:390px;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2U3ZGZkMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2M0YjQ5ZCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiM1ZDY2NWYiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjMjAyYjI1Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNzc4MDc4Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9InVybCgjYikiLz48cmVjdCB5PSI0NDAiIHdpZHRoPSI5MDAiIGhlaWdodD0iMTYwIiBmaWxsPSIjNzY1MDM4Ii8+PHJlY3QgeD0iMzIwIiB5PSIxNzAiIHdpZHRoPSIyNTAiIGhlaWdodD0iMzAwIiByeD0iMzAiIGZpbGw9InVybCgjZykiLz48cmVjdCB4PSIzNTAiIHk9IjkwIiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjEyMCIgcng9IjI4IiBmaWxsPSIjYjlhODhmIi8+PHBhdGggZD0iTTM2NSAxMDBoMTYwbC0yNS02NWgtMTEweiIgZmlsbD0iI2Q5ZDBjMSIvPjxyZWN0IHg9IjM1NSIgeT0iMjgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjkwIiByeD0iMTQiIGZpbGw9IiMzODQ0M2MiLz48Y2lyY2xlIGN4PSI0NDUiIGN5PSIzMjUiIHI9IjI2IiBmaWxsPSIjYzVhZTg3Ii8+PGNpcmNsZSBjeD0iNDQ1IiBjeT0iMzI1IiByPSI5IiBmaWxsPSIjNTE0NTM2Ii8+PHJlY3QgeD0iMzkwIiB5PSI0NjUiIHdpZHRoPSIxMTAiIGhlaWdodD0iMTgiIHJ4PSI2IiBmaWxsPSIjMzEzYTM0Ii8+PGVsbGlwc2UgY3g9IjQ1MCIgY3k9IjUxMCIgcng9IjIxMCIgcnk9IjI4IiBmaWxsPSIjMzIyNTFiIiBvcGFjaXR5PSIuMTgiLz48ZyBmaWxsPSIjNGEyYjFiIj48ZWxsaXBzZSBjeD0iMTgwIiBjeT0iNDYyIiByeD0iMjIiIHJ5PSIxMyIvPjxlbGxpcHNlIGN4PSIyMjAiIGN5PSI0ODUiIHJ4PSIxOCIgcnk9IjExIi8+PGVsbGlwc2UgY3g9IjcwMCIgY3k9IjQ4MCIgcng9IjIwIiByeT0iMTIiLz48ZWxsaXBzZSBjeD0iNzQwIiBjeT0iNDU1IiByeD0iMTgiIHJ5PSIxMSIvPjwvZz48dGV4dCB4PSI2MCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhIiBmb250LXNpemU9IjI4IiBmaWxsPSIjNGI1MTQ5Ij5QUkVDSVNJT04gSU4gRVZFUlkgR1JJTkQ8L3RleHQ+PC9zdmc+');background-position:center;background-size:cover}.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.guide{padding:25px;background:#ebe5da;min-height:210px;display:flex;flex-direction:column;justify-content:space-between}.guide small{color:var(--green2);letter-spacing:.15em;text-transform:uppercase;font-size:9px}.guide h3{font:normal 25px/1.15 Georgia,serif;margin:24px 0 14px}.guide span{font-size:10px;letter-spacing:.12em;text-transform:uppercase}.newsletter{background:#e9e3d8;padding:65px 28px;text-align:center}.newsletter h2{font:normal 42px Georgia,serif;margin:10px 0}.newsletter p{color:var(--muted);font-size:13px}.signup{display:flex;max-width:440px;margin:24px auto 0}.signup input{flex:1;min-width:0;padding:15px;border:1px solid #d4ccbd;background:var(--white);outline:none}.signup button{border:0;background:var(--green);color:white;padding:0 18px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}.disclosure{font-size:11px;color:#858278;line-height:1.7;max-width:850px;margin:25px auto 0;padding:0 20px}.footer{background:#202720;color:#eae6dc;padding:40px 28px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:30px;align-items:center}.footer p{font-size:11px;color:#b8b9ae}.footer-links{display:flex;gap:20px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#d2d0c7}.mobile-menu{display:none}
+@media(max-width:760px){.nav{padding:0 18px;height:66px}.navlinks{display:none}.mobile-menu{display:block;border:0;background:none;font-size:22px}.nav-cta{display:none}.hero{grid-template-columns:1fr;padding:35px 18px 45px;gap:28px}.hero-image{min-height:330px}.strip{gap:18px 30px}.section{padding:55px 18px}.section-head{display:block}.section-head p{margin-top:15px}.cards,.guide-grid{grid-template-columns:1fr}.card-img{height:230px}.feature-inner{grid-template-columns:1fr;padding:55px 18px;gap:25px}.feature-image{height:280px}.newsletter{padding:50px 18px}.newsletter h2{font-size:34px}.footer-inner{display:block}.footer-links{margin-top:22px;flex-wrap:wrap}}
+
+/* BREWCRAFT product comparison */
+.compare-section{background:#eee9df;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.compare-wrap{max-width:1180px;margin:auto;padding:76px 28px}
+.compare-intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}
+.compare-intro p{max-width:390px;color:var(--muted);font-size:13px;line-height:1.75;margin:0}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.product-card{background:var(--white);border:1px solid #ddd6ca;position:relative;display:flex;flex-direction:column;min-width:0}
+.product-card.featured{border:1px solid var(--green);box-shadow:0 10px 28px rgba(40,45,37,.08)}
+.product-label{position:absolute;top:14px;left:14px;z-index:1;background:var(--green);color:#fff;padding:8px 10px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+.product-art{height:220px;background:linear-gradient(145deg,#eee9df,#d8d0c2);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-art svg{height:88%;width:90%;max-width:310px}
+.product-art.product-photo{background:#f5f2ec;padding:10px}
+.product-image-link{display:block;color:inherit;text-decoration:none;cursor:pointer}.product-image-link:focus-visible{outline:3px solid #b58b55;outline-offset:3px;border-radius:12px}.product-image-link:hover .product-art img{transform:scale(1.025)}.product-art.product-photo img{display:block;width:100%;height:100%;object-fit:contain}
+.photo-credit{font-size:9px;line-height:1.4;color:#77766f;background:#f5f2ec;padding:0 12px 9px;text-align:right}
+.photo-credit a{text-decoration:underline;color:#34483b}
+.product-content{padding:22px;display:flex;flex-direction:column;flex:1}
+.product-kicker{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--green2);font-weight:700}
+.product-content h3{font:normal 24px/1.12 Georgia,serif;margin:9px 0 8px}
+.product-summary{font-size:12px;color:var(--muted);line-height:1.65;min-height:58px;margin:0 0 15px}
+.product-price{font:normal 24px Georgia,serif;margin:0 0 3px}
+.price-note{font-size:10px;color:var(--muted);margin-bottom:16px}
+.procon{border-top:1px solid var(--line);padding-top:13px;margin-top:2px}
+.procon div{font-size:11px;line-height:1.6;margin:5px 0;color:#55584f}
+.procon b{color:var(--green)}
+.product-cta{display:block;text-align:center;background:var(--green);color:#fff;padding:13px 12px;margin-top:auto;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.product-cta:hover{background:#26372d}
+.compare-table-wrap{margin-top:28px;background:var(--white);border:1px solid #ddd6ca;overflow-x:auto}
+.compare-table{border-collapse:collapse;width:100%;min-width:650px;text-align:left}
+.compare-table th,.compare-table td{padding:15px 17px;border-bottom:1px solid var(--line);font-size:12px;line-height:1.5}
+.compare-table th{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:#f8f5ef}
+.compare-table td:first-child{font-weight:700;color:#4f554d;width:22%}
+.compare-table tr:last-child td{border-bottom:0}
+.comparison-footnote{font-size:10px;color:var(--muted);line-height:1.7;margin:14px 0 0}
+@media(max-width:760px){.compare-wrap{padding:55px 18px}.compare-intro{display:block}.compare-intro p{margin-top:15px}.product-grid{grid-template-columns:1fr}.product-art{height:205px}.product-summary{min-height:0}}
+
+
+/* Interactive BREWCRAFT equipment finder */
+.finder-section{background:#f8f5ef;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.finder-wrap{max-width:1180px;margin:auto;padding:76px 28px}
+.finder-head{max-width:690px;margin-bottom:30px}
+.finder-head h2{font:normal clamp(34px,4vw,48px)/1.05 Georgia,serif;letter-spacing:-.03em;margin:12px 0}
+.finder-head p{color:var(--muted);font-size:13px;line-height:1.75}
+.finder-panel{background:#ebe5da;padding:28px;border:1px solid #ddd5c8}
+.finder-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.finder-field label{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:9px}
+.finder-field select{width:100%;background:var(--white);border:1px solid #d4ccbd;padding:13px 34px 13px 12px;color:var(--ink);font-size:13px;border-radius:0;min-height:46px}
+.finder-actions{display:flex;align-items:center;gap:16px;margin-top:22px;flex-wrap:wrap}
+.finder-actions button{border:0}
+.finder-reset{background:transparent;border:0;color:var(--green);font-size:11px;text-decoration:underline;cursor:pointer;padding:10px}
+.finder-results{margin-top:36px}
+.finder-results-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}
+.finder-results-head h3{font:normal 28px Georgia,serif;margin:0}
+.finder-results-head p{font-size:11px;color:var(--muted);margin:0}
+.finder-result-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.finder-result{background:var(--white);border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;min-height:255px}
+.finder-result .match-tag{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--green2);font-weight:700}
+.finder-result h4{font:normal 23px Georgia,serif;margin:12px 0 8px}
+.finder-result p{font-size:12px;color:var(--muted);line-height:1.65;margin:0 0 14px}
+.finder-result .finder-price{font:normal 20px Georgia,serif;margin-top:auto;margin-bottom:14px}
+.finder-result a{display:block;text-align:center;background:var(--green);color:white;padding:12px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.finder-note{font-size:10px;color:var(--muted);line-height:1.7;margin:16px 0 0}
+@media(max-width:850px){.finder-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.finder-result-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.finder-wrap{padding:56px 18px}.finder-panel{padding:20px}.finder-fields,.finder-result-grid{grid-template-columns:1fr}.finder-results-head{display:block}.finder-results-head p{margin-top:8px}}
+
+</style>
+</head>
+<body>
+<div class="topbar">Buen equipo. Mejor café. Sin complicaciones.</div>
+<header class="nav">\n  <a class="lang-switch" href="index.html">English</a> / <strong>Español</strong>
+  <a class="logo" href="#">BREW<span>CRAFT</span></a>
+  <nav class="navlinks"><a href="#machines">Cafeteras espresso</a><a href="#compare">Comparar cafeteras</a><a href="#finder">Encuentra tu equipo</a><a href="#grinders">Molinos</a><a href="#guides">Guías de compra</a><a href="#about">Nuestra metodología</a></nav>
+  <a class="nav-cta" href="#guides">Explora las guías</a>
+  <button class="mobile-menu" aria-label="Menu" onclick="document.querySelector('.navlinks').style.display=document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
+</header>
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow">El diario del barista en casa</div>
+    <h1>Convierte tu cocina en tu cafetería favorita.</h1>
+    <p>Consejos claros y bien pensados sobre cafeteras espresso, molinos y esos pequeños detalles que hacen que el café en casa sea realmente mejor.</p>
+    <div class="actions"><a class="btn" href="#machines">Encuentra tu equipo</a><a class="btn secondary" href="#guides">Leer guías de compra</a></div>
+  </div>
+  <div class="hero-image"><div class="image-note">Una mejor mañana empieza aquí.</div></div>
+</section>
+<div class="strip"><span>Investigación independiente</span><span>Comparaciones prácticas</span><span>Para todos los presupuestos</span><span>Para preparar café en casa</span></div>
+<section class="section" id="machines">
+  <div class="section-head"><div><div class="eyebrow">Empieza por lo esencial</div><h2>Crea tu rincón de café.</h2></div><p>Desde tu primera cafetera espresso hasta un espacio de café bien equipado, empieza por lo que realmente marca la diferencia.</p></div>
+  <div class="cards">
+    <article class="card"><div class="card-img" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAwIDkwMCI+CjxkZWZzPgogPGxpbmVhckdyYWRpZW50IGlkPSJ3YWxsIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNlOGRmZDAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNjYmJkYTgiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJzdGVlbCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZjdmOGY1Ii8+PHN0b3Agb2Zmc2V0PSIuMzUiIHN0b3AtY29sb3I9IiM5ZWE2YTEiLz48c3RvcCBvZmZzZXQ9Ii42NSIgc3RvcC1jb2xvcj0iI2U1ZThlMyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzYyNmQ2OCIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9Indvb2QiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzlhNjg0NSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzU1MzkyNyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImN1cCIgeDI9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZmZGY2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjY2ZjOWJkIi8+PC9saW5lYXJHcmFkaWVudD4KIDxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMjIiLz48L2ZpbHRlcj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjd2FsbCkiLz48cmVjdCB4PSIxMDAiIHk9IjAiIHdpZHRoPSIzMzAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjVlZGRmIiBvcGFjaXR5PSIuNiIvPjxwYXRoIGQ9Ik0xMDAgMHY2MDBNNDMwIDB2NjAwIiBzdHJva2U9IiNiOWFkOWIiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjUiLz4KPGVsbGlwc2UgY3g9Ijc0MCIgY3k9Ijc0MCIgcng9IjU1MCIgcnk9IjY1IiBmaWxsPSIjMmIyMTE5IiBvcGFjaXR5PSIuMiIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KPHJlY3QgeT0iNjcwIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIyMzAiIGZpbGw9InVybCgjd29vZCkiLz48cGF0aCBkPSJNMCA3MzBoMTQwME0wIDgxNWgxNDAwIiBzdHJva2U9IiNjMjhkNWYiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjMiLz4KPCEtLSBtYWNoaW5lIGJvZHkgLS0+CjxyZWN0IHg9IjM5MCIgeT0iMjIwIiB3aWR0aD0iNTcwIiBoZWlnaHQ9IjQzMCIgcng9IjI4IiBmaWxsPSJ1cmwoI3N0ZWVsKSIgc3Ryb2tlPSIjNTk2MzVlIiBzdHJva2Utd2lkdGg9IjgiLz4KPHJlY3QgeD0iNDI1IiB5PSIyNTAiIHdpZHRoPSI1MDAiIGhlaWdodD0iODAiIHJ4PSIxMiIgZmlsbD0iIzI2MzEyZCIvPjxyZWN0IHg9IjQ2MCIgeT0iMjY4IiB3aWR0aD0iMTY1IiBoZWlnaHQ9IjQwIiByeD0iNiIgZmlsbD0iI2Q1YzZhOSIvPgo8Y2lyY2xlIGN4PSI4MjUiIGN5PSIyOTAiIHI9IjE3IiBmaWxsPSIjYjc4YTRmIi8+PGNpcmNsZSBjeD0iODc1IiBjeT0iMjkwIiByPSIxNyIgZmlsbD0iI2I3OGE0ZiIvPgo8cmVjdCB4PSI0NzAiIHk9IjM2NSIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiM2OTczNmUiLz48cmVjdCB4PSI1MDAiIHk9IjM4NSIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiNkZmUzZGYiLz4KPHBhdGggZD0iTTY1MCA0MDB2OTVoLTI1djMwaDc1di0zMGgtMjV2LTk1IiBmaWxsPSIjMzAzYTM1Ii8+CjxwYXRoIGQ9Ik03MDAgNTI0YzAgMjgtMTYgNDQtMTYgNDQiIHN0cm9rZT0iIzVjMzMyMCIgc3Ryb2tlLXdpZHRoPSI3IiBmaWxsPSJub25lIi8+CjxyZWN0IHg9IjU2NSIgeT0iNTU1IiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzUwNWI1NSIvPjxwYXRoIGQ9Ik01NzUgNTc1aDIwMGwtMjIgNDhINTk3eiIgZmlsbD0iIzdiODU4MCIvPgo8IS0tIHN0ZWFtIHdhbmQgLS0+CjxwYXRoIGQ9Ik05MDAgNDEwaDQ1djEzNSIgc3Ryb2tlPSIjNzI3ZDc3IiBzdHJva2Utd2lkdGg9IjE3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNOTQ1IDU0NXEtNSAyNiAxMiAzNSIgc3Ryb2tlPSIjZTVlOWU0IiBzdHJva2Utd2lkdGg9IjEyIiBmaWxsPSJub25lIi8+CjwhLS0gZ3JpbmRlciAtLT4KPHJlY3QgeD0iMTAxMCIgeT0iMzY1IiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjI4MCIgcng9IjIyIiBmaWxsPSIjMjgzMzJkIi8+PHJlY3QgeD0iMTAzMCIgeT0iMzAwIiB3aWR0aD0iMTUwIiBoZWlnaHQ9Ijk1IiByeD0iMTgiIGZpbGw9IiM1NzRjM2QiLz48cGF0aCBkPSJNMTA0MiAzMTBoMTI1bC0xOC04MGgtODh6IiBmaWxsPSIjYjlhNjhjIiBvcGFjaXR5PSIuOCIvPjxyZWN0IHg9IjEwNDAiIHk9IjQ0NSIgd2lkdGg9IjEzMCIgaGVpZ2h0PSI5MCIgcng9IjEyIiBmaWxsPSIjNDk1NjRlIi8+PGNpcmNsZSBjeD0iMTEwNSIgY3k9IjQ5MCIgcj0iMjMiIGZpbGw9IiNkNGM1YTYiLz48Y2lyY2xlIGN4PSIxMTA1IiBjeT0iNDkwIiByPSI5IiBmaWxsPSIjM2U0OTNmIi8+CjwhLS0gY3VwIC0tPgo8ZWxsaXBzZSBjeD0iODMwIiBjeT0iNzAwIiByeD0iODMiIHJ5PSIxNiIgZmlsbD0iIzM4MmEyMCIgb3BhY2l0eT0iLjI1Ii8+PHBhdGggZD0iTTc2MCA2MjBoMTMwbC0xMyA5MnEtNTIgMzUtMTA0IDB6IiBmaWxsPSJ1cmwoI2N1cCkiIHN0cm9rZT0iI2E4YTE5NiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZD0iTTg5MCA2NDBxNzAtMTAgNDggNDhxLTEyIDMwLTU2IDIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNkOGQxYzUiIHN0cm9rZS13aWR0aD0iMTgiLz48ZWxsaXBzZSBjeD0iODI1IiBjeT0iNjIzIiByeD0iNjUiIHJ5PSIxMyIgZmlsbD0iIzRiMmQxZCIvPjxlbGxpcHNlIGN4PSI4MjUiIGN5PSI2MjAiIHJ4PSI1MiIgcnk9IjgiIGZpbGw9IiNjMThiNGUiLz4KPCEtLSBiZWFucyAtLT4KPGcgZmlsbD0iIzRhMmMxZCI+PGVsbGlwc2UgY3g9IjI3MCIgY3k9IjcyNSIgcng9IjIwIiByeT0iMTIiIHRyYW5zZm9ybT0icm90YXRlKDI1IDI3MCA3MjUpIi8+PHBhdGggZD0iTTI2MCA3MTVxMTIgMTIgMjAgMjAiIHN0cm9rZT0iI2JkOGI1YiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PGVsbGlwc2UgY3g9IjMxNSIgY3k9IjcwMCIgcng9IjE4IiByeT0iMTEiIHRyYW5zZm9ybT0icm90YXRlKC0yNSAzMTUgNzAwKSIvPjxwYXRoIGQ9Ik0zMDQgNjk0cTEwIDEwIDIwIDE0IiBzdHJva2U9IiNiZDhiNWIiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxlbGxpcHNlIGN4PSIzNTAiIGN5PSI3MzUiIHJ4PSIyMCIgcnk9IjEyIi8+PHBhdGggZD0iTTMzOSA3MjVxMTIgMTIgMjIgMjAiIHN0cm9rZT0iI2JkOGI1YiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PC9nPgo8dGV4dCB4PSI5MCIgeT0iMTE1IiBmb250LWZhbWlseT0iR2VvcmdpYSIgZm9udC1zaXplPSIzNCIgZmlsbD0iIzVjNWE0ZiIgbGV0dGVyLXNwYWNpbmc9IjciPlRIRSBIT01FIEJBUklTVEEgSk9VUk5BTDwvdGV4dD4KPC9zdmc+')"><span class="tag">La pieza principal</span></div><div class="card-body"><div class="eyebrow">01 / Espresso</div><h3>Cafeteras espresso</h3><p>Compara máquinas para principiantes, opciones semiprofesionales y equipos compactos.</p><a class="text-link" href="#guides">Explorar cafeteras →</a></div></article>
+    <article class="card" id="grinders"><div class="card-img" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2U3ZGZkMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2M0YjQ5ZCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiM1ZDY2NWYiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjMjAyYjI1Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNzc4MDc4Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9InVybCgjYikiLz48cmVjdCB5PSI0NDAiIHdpZHRoPSI5MDAiIGhlaWdodD0iMTYwIiBmaWxsPSIjNzY1MDM4Ii8+PHJlY3QgeD0iMzIwIiB5PSIxNzAiIHdpZHRoPSIyNTAiIGhlaWdodD0iMzAwIiByeD0iMzAiIGZpbGw9InVybCgjZykiLz48cmVjdCB4PSIzNTAiIHk9IjkwIiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjEyMCIgcng9IjI4IiBmaWxsPSIjYjlhODhmIi8+PHBhdGggZD0iTTM2NSAxMDBoMTYwbC0yNS02NWgtMTEweiIgZmlsbD0iI2Q5ZDBjMSIvPjxyZWN0IHg9IjM1NSIgeT0iMjgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjkwIiByeD0iMTQiIGZpbGw9IiMzODQ0M2MiLz48Y2lyY2xlIGN4PSI0NDUiIGN5PSIzMjUiIHI9IjI2IiBmaWxsPSIjYzVhZTg3Ii8+PGNpcmNsZSBjeD0iNDQ1IiBjeT0iMzI1IiByPSI5IiBmaWxsPSIjNTE0NTM2Ii8+PHJlY3QgeD0iMzkwIiB5PSI0NjUiIHdpZHRoPSIxMTAiIGhlaWdodD0iMTgiIHJ4PSI2IiBmaWxsPSIjMzEzYTM0Ii8+PGVsbGlwc2UgY3g9IjQ1MCIgY3k9IjUxMCIgcng9IjIxMCIgcnk9IjI4IiBmaWxsPSIjMzIyNTFiIiBvcGFjaXR5PSIuMTgiLz48ZyBmaWxsPSIjNGEyYjFiIj48ZWxsaXBzZSBjeD0iMTgwIiBjeT0iNDYyIiByeD0iMjIiIHJ5PSIxMyIvPjxlbGxpcHNlIGN4PSIyMjAiIGN5PSI0ODUiIHJ4PSIxOCIgcnk9IjExIi8+PGVsbGlwc2UgY3g9IjcwMCIgY3k9IjQ4MCIgcng9IjIwIiByeT0iMTIiLz48ZWxsaXBzZSBjeD0iNzQwIiBjeT0iNDU1IiByeD0iMTgiIHJ5PSIxMSIvPjwvZz48dGV4dCB4PSI2MCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhIiBmb250LXNpemU9IjI4IiBmaWxsPSIjNGI1MTQ5Ij5QUkVDSVNJT04gSU4gRVZFUlkgR1JJTkQ8L3RleHQ+PC9zdmc+')"><span class="tag">Lo que cambia el juego</span></div><div class="card-body"><div class="eyebrow">02 / Consistency</div><h3>Coffee grinders</h3><p>Encuentra el molino de muelas adecuado para espresso, café filtrado o un equipo versátil.</p><a class="text-link" href="#guides">Explorar molinos →</a></div></article>
+    <article class="card"><div class="card-img" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNlOGUxZDUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNjNmI2OWYiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iY3VwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmZkZjgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNjOWMyYjYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNiZykiLz48cmVjdCB5PSI0NDAiIHdpZHRoPSI5MDAiIGhlaWdodD0iMTYwIiBmaWxsPSIjNzY1MTNhIi8+PGVsbGlwc2UgY3g9IjQ1NSIgY3k9IjQ3MCIgcng9IjIzNSIgcnk9IjQwIiBmaWxsPSIjMzMyNTFhIiBvcGFjaXR5PSIuMiIvPjxwYXRoIGQ9Ik0yODUgMjIwaDM0MGwtMzUgMjQwcS0xMzUgNjUtMjcwIDB6IiBmaWxsPSJ1cmwoI2N1cCkiIHN0cm9rZT0iI2E2OWQ5MCIgc3Ryb2tlLXdpZHRoPSI3Ii8+PHBhdGggZD0iTTYyNSAyNzBxMTU1LTI1IDEwNSAxMTBxLTI1IDY1LTE0NSA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTllNGQ5IiBzdHJva2Utd2lkdGg9IjI4Ii8+PGVsbGlwc2UgY3g9IjQ1NSIgY3k9IjIyNSIgcng9IjE3MCIgcnk9IjM1IiBmaWxsPSIjM2IyNDE4Ii8+PGVsbGlwc2UgY3g9IjQ1NSIgY3k9IjIyMCIgcng9IjE0MCIgcnk9IjI1IiBmaWxsPSIjYjc3YzQzIi8+PHBhdGggZD0iTTM4NSAyMjBxNzAtNjAgMTQwIDBxLTcwIDYwLTE0MCAwIiBmaWxsPSIjZjVlNmM5Ii8+PHBhdGggZD0iTTQyMCAyMjBxMzUtMzIgNzAgMHEtMzUgMzAtNzAgMCIgZmlsbD0iI2Y1ZTZjOSIvPjx0ZXh0IHg9IjYwIiB5PSI4MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9IiM0OTM4MmEiPlRIRSBEQUlMWSBDT0ZGRUUgUklUVUFMPC90ZXh0Pjwvc3ZnPg==')"><span class="tag">Los detalles finales</span></div><div class="card-body"><div class="eyebrow">03 / Accessories</div><h3>Herramientas y accesorios</h3><p>Básculas, prensadores, jarras para leche, filtros y mejoras que vale la pena considerar.</p><a class="text-link" href="#guides">Explorar accesorios →</a></div></article>
+  </div>
+</section>
+
+
+<section class="finder-section" id="finder">
+  <div class="finder-wrap">
+    <div class="finder-head">
+      <div class="eyebrow">Un mejor punto de partida</div>
+      <h2>Encuentra el equipo de café adecuado.</h2>
+      <p>Cuéntanos un poco sobre tu presupuesto y cómo te gusta preparar café. Reduciremos las opciones a tres buenos puntos de partida.</p>
+    </div>
+    <div class="finder-panel">
+      <div class="finder-fields">
+        <div class="finder-field">
+          <label for="finder-budget">Tu presupuesto</label>
+          <select id="finder-budget">
+            <option value="under400">Menos de $400</option>
+            <option value="400to700" selected>$400–$700</option>
+            <option value="over700">$700 o más</option>
+          </select>
+        </div>
+        <div class="finder-field">
+          <label for="finder-style">¿Qué preparas?</label>
+          <select id="finder-style">
+            <option value="espresso" selected>Espresso</option>
+            <option value="milk">Bebidas con leche</option>
+            <option value="filter">Café de goteo o filtrado</option>
+          </select>
+        </div>
+        <div class="finder-field">
+          <label for="finder-experience">Tu experiencia</label>
+          <select id="finder-experience">
+            <option value="beginner" selected>Estoy empezando</option>
+            <option value="some">Tengo algo de experiencia</option>
+            <option value="enthusiast">Barista casero con experiencia</option>
+          </select>
+        </div>
+        <div class="finder-field">
+          <label for="finder-priority">¿Qué es lo más importante?</label>
+          <select id="finder-priority">
+            <option value="easy" selected>Facilidad para el día a día</option>
+            <option value="control">Mayor control</option>
+            <option value="value">La mejor relación calidad-precio</option>
+          </select>
+        </div>
+      </div>
+      <div class="finder-actions">
+        <button class="btn" id="finder-submit" type="button">Mostrar mis recomendaciones</button>
+        <button class="finder-reset" id="finder-reset" type="button">Restablecer opciones</button>
+      </div>
+    </div>
+    <div class="finder-results" id="finder-results" aria-live="polite">
+      <div class="finder-results-head">
+        <h3>Tus primeras recomendaciones</h3>
+        <p>Según las preferencias que seleccionaste</p>
+      </div>
+      <div class="finder-result-grid" id="finder-result-grid">
+        <article class="finder-result"><div class="match-tag">Un buen primer paso</div><h4>Breville Bambino</h4><p>A compact manual espresso machine to learn the fundamentals without taking over your counter.</p><div class="finder-price">Alrededor de $300</div><a href="https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver en Amazon</a></article>
+        <article class="finder-result"><div class="match-tag">La opción más cómoda</div><h4>Breville Bambino Plus</h4><p>A compact option with automatic milk texturing for people who make milk drinks often.</p><div class="finder-price">Alrededor de $500</div><a href="https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver en Amazon</a></article>
+        <article class="finder-result"><div class="match-tag">La opción más manual</div><h4>Gaggia Classic Pro E24</h4><p>A traditional machine with a more hands-on workflow and room to develop your technique.</p><div class="finder-price">Alrededor de $550–$600</div><a href="https://www.gaggia.com/manual-machines/new-classic-e24/" target="_blank" rel="noopener noreferrer">Ver en Amazon</a></article>
+      </div>
+      <p class="finder-note">Estas recomendaciones son puntos de partida basados en investigación, no resultados de pruebas personalizadas ni garantías. Los precios y la disponibilidad cambian. Un buen molino también es importante para preparar espresso; estas máquinas no incluyen uno.</p>
+    </div>
+  </div>
+</section>
+
+<section class="compare-section" id="compare">
+  <div class="compare-wrap">
+    <div class="compare-intro">
+      <div><div class="eyebrow">La selección de Brewcraft</div><h2 class="section" style="padding:0;margin:12px 0 0;font:normal clamp(34px,4vw,48px)/1.05 Georgia,serif;letter-spacing:-.03em">Tres cafeteras que vale la pena comparar.</h2></div>
+      <p>Cada una tiene ventajas y un proceso distinto. Empieza por lo que más te importa: comodidad, control manual o un precio inicial más bajo.</p>
+    </div>
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-label">Para empezar</div>
+        <a class="product-image-link" href="https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label="View this product on Amazon"><div class="product-art product-photo" role="img" aria-label="AI-generated illustrative image of a compact stainless espresso machine"><img src="bambino-style.png" alt="AI-generated illustration of a compact stainless-steel home espresso machine"></div></a>
+        <div class="product-content">
+          <div class="product-kicker">Sencilla, compacta y capaz</div>
+          <h3>Breville Bambino</h3>
+          <p class="product-summary">A compact starting point with fast heat-up and manual milk texturing for learning the basics.</p>
+          <div class="product-price">$299.95</div><div class="price-note">U.S. list price reference · check current price</div>
+          <div class="procon">
+            <div><b>Good:</b> Compact footprint, fast ThermoJet heating, PID temperature control.</div>
+            <div><b>Consider:</b> No automatic milk texturing; grinder sold separately.</div>
+          </div>
+          <a class="product-cta" href="https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Check availability</a><a class="text-link" href="breville-bambino-review-es.html">Read the full review →</a>
+        </div>
+      </article>
+      <article class="product-card featured">
+        <div class="product-label">La mejor por comodidad</div>
+        <a class="product-image-link" href="https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label="View this product on Amazon"><div class="product-art product-photo" role="img" aria-label="AI-generated illustrative image of a compact espresso machine with automatic milk texturing"><img src="bambino-plus-style.png" alt="AI-generated illustration of a compact stainless-steel espresso machine with milk steaming wand"></div></a>
+        <div class="product-content">
+          <div class="product-kicker">Una rutina diaria más sencilla</div>
+          <h3>Breville Bambino Plus</h3>
+          <p class="product-summary">Adds hands-free automatic milk texturing, with adjustable temperature and texture settings.</p>
+          <div class="product-price">$499.95</div><div class="price-note">U.S. list price reference · check current price</div>
+          <div class="procon">
+            <div><b>Good:</b> Three-second heat-up, automatic or manual milk texturing, compact size.</div>
+            <div><b>Consider:</b> Costs more than the Bambino; grinder sold separately.</div>
+          </div>
+          <a class="product-cta" href="https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Check availability</a><a class="text-link" href="breville-bambino-plus-review-es.html">Read the full review →</a>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-label">Control manual</div>
+        <a class="product-image-link" href="https://www.gaggia.com/manual-machines/new-classic-e24/" target="_blank" rel="noopener noreferrer" aria-label="View product details at Gaggia"><div class="product-art product-photo" role="img" aria-label="AI-generated illustrative image of a traditional stainless espresso machine"><img src="gaggia-style.png" alt="AI-generated illustration of a traditional stainless-steel espresso machine"></div></a>
+        <div class="product-content">
+          <div class="product-kicker">Preparación tradicional de espresso</div>
+          <h3>Gaggia Classic Pro E24</h3>
+          <p class="product-summary">A more traditional single-boiler machine for buyers who want a hands-on process and a 58 mm portafilter.</p>
+          <div class="product-price">$549–$599</div><div class="price-note">U.S. list price reference · check current price</div>
+          <div class="procon">
+            <div><b>Good:</b> 58 mm portafilter, traditional controls, substantial upgrade path.</div>
+            <div><b>Consider:</b> More manual workflow; allow time for temperature changes between brewing and steaming.</div>
+          </div>
+          <a class="product-cta" href="https://www.gaggia.com/manual-machines/new-classic-e24/" target="_blank" rel="noopener noreferrer">View manufacturer details</a><a class="text-link" href="gaggia-classic-e24-review-es.html">Read the full review →</a>
+        </div>
+      </article>
+    </div>
+    <p class="comparison-footnote">Product images are AI-generated illustrations for visual reference and may not depict the exact manufacturer models shown.</p>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead><tr><th>What matters</th><th>Breville Bambino</th><th>Breville Bambino Plus</th><th>Gaggia Classic Pro E24</th></tr></thead>
+        <tbody>
+          <tr><td>Rango de precio habitual en EE. UU.</td><td>$249.95–$299.95</td><td>$399.95–$499.95</td><td>Acerca de $499–$549</td></tr>
+          <tr><td>Ideal para</td><td>Beginners who want good espresso without paying extra for automatic milk</td><td>Latte and cappuccino drinkers who value convenience</td><td>Enthusiasts who enjoy manual espresso and want a traditional 58 mm platform</td></tr>
+          <tr><td>Ventajas</td><td>Compact; heats in about 3 seconds; PID temperature control; straightforward controls</td><td>Fast heat-up; automatic or manual milk texturing; adjustable milk temperature and texture; 2-year limited warranty</td><td>Lead-free brass boiler; 58 mm portafilter; commercial-style steam wand; sturdy stainless-steel construction</td></tr>
+          <tr><td>Desventajas</td><td>Manual milk steaming; 54 mm accessories; no built-in grinder</td><td>Costs more than the Bambino; 54 mm accessories; no built-in grinder</td><td>Single-boiler workflow takes more practice; manual milk steaming; no factory PID; no built-in grinder</td></tr>
+          <tr><td>Sistema de calentamiento</td><td>ThermoJet</td><td>ThermoJet</td><td>Single lead-free brass boiler</td></tr>
+          <tr><td>Texturización de leche</td><td>Varilla de vapor manual</td><td>Automática o manual</td><td>Varilla de vapor manual de estilo profesional</td></tr>
+          <tr><td>Portafiltro</td><td>54 mm</td><td>54 mm</td><td>58 mm</td></tr>
+          <tr><td>Molino integrado</td><td>No</td><td>No</td><td>No</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="comparison-footnote">Price ranges are approximate U.S. references based on manufacturer pricing and observed retailer offers; promotions, finish, seller and availability can change the final price. Breville lists the Bambino at $299.95 (with a shown $249.95 offer) and Bambino Plus at $499.95 (with a shown $399.95 offer). Gaggia lists the Classic Pro E24 at $549. Product strengths and trade-offs are editorial summaries of published specifications, not claims of hands-on testing. All three machines require a separate grinder. Amazon buttons link directly to verified product listings where the exact model was confirmed. The Gaggia E24 button links to the manufacturer because its Amazon listing could not be reliably distinguished from the older model.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="section-head"><div><div class="eyebrow">Una mirada más de cerca</div><h2>Los pequeños detalles importan.</h2></div><p>Granos recién molidos, una extracción equilibrada y el ritual de preparar algo excelente.</p></div>
+  <div class="cards">
+    <div class="card"><div class="card-img" style="height:260px;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNlOGRkY2IiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNiOWE0OGEiLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iYmVhbiI+PHN0b3Agc3RvcC1jb2xvcj0iIzlhNjI0MCIvPjxzdG9wIG9mZnNldD0iLjciIHN0b3AtY29sb3I9IiM1NzMyMWYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTFjMTMiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNiZykiLz48cGF0aCBkPSJNMCA0NDBxMjMwLTYwIDQ1MCAwdDQ1MCAwdjE2MEgweiIgZmlsbD0iIzY4NDUyZiIvPjxnIGZpbGw9InVybCgjYmVhbikiIHN0cm9rZT0iIzNhMjQxOCIgc3Ryb2tlLXdpZHRoPSIzIj48ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMjgwIiByeD0iNjgiIHJ5PSI0MyIgdHJhbnNmb3JtPSJyb3RhdGUoMjUgMTYwIDI4MCkiLz48ZWxsaXBzZSBjeD0iMzAwIiBjeT0iMjEwIiByeD0iNjIiIHJ5PSI0MCIgdHJhbnNmb3JtPSJyb3RhdGUoLTIwIDMwMCAyMTApIi8+PGVsbGlwc2UgY3g9IjQ2MCIgY3k9IjMwMCIgcng9IjcwIiByeT0iNDUiIHRyYW5zZm9ybT0icm90YXRlKDEyIDQ2MCAzMDApIi8+PGVsbGlwc2UgY3g9IjYzMCIgY3k9IjIxMCIgcng9IjY1IiByeT0iNDIiIHRyYW5zZm9ybT0icm90YXRlKDM1IDYzMCAyMTApIi8+PGVsbGlwc2UgY3g9Ijc0MCIgY3k9IjM1MCIgcng9IjcwIiByeT0iNDUiIHRyYW5zZm9ybT0icm90YXRlKC0yNCA3NDAgMzUwKSIvPjxlbGxpcHNlIGN4PSIyOTAiIGN5PSI0MzAiIHJ4PSI2OCIgcnk9IjQyIiB0cmFuc2Zvcm09InJvdGF0ZSgzNSAyOTAgNDMwKSIvPjxlbGxpcHNlIGN4PSI1NjAiIGN5PSI0NjAiIHJ4PSI2NSIgcnk9IjQwIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTAgNTYwIDQ2MCkiLz48L2c+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzE4YjVkIiBzdHJva2Utd2lkdGg9IjciPjxwYXRoIGQ9Ik0xMjAgMjQ4cTQwIDMwIDgwIDY4TTI2NSAxOTBxMzUgMjAgNzAgNDBNNDIwIDI3NXE0MCAyNSA4MCA0NU01OTAgMTg1cTM1IDI1IDgwIDUwTTcwMCAzMzBxNDAgMjUgODAgNDUiLz48L2c+PHRleHQgeD0iNTgiIHk9IjgwIiBmb250LWZhbWlseT0iR2VvcmdpYSIgZm9udC1zaXplPSIzMCIgZmlsbD0iIzQ5MzgyYSI+RlJFU0hMWSBST0FTVEVELiBSRUFEWSBUTyBCUkVXLjwvdGV4dD48L3N2Zz4=')"></div><div class="card-body"><div class="eyebrow">Recién molido</div><h3>Start with good beans.</h3><p>Great coffee begins before the espresso machine is switched on.</p></div></div>
+    <div class="card"><div class="card-img" style="height:260px;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNlOGUxZDUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNjNmI2OWYiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iY3VwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmZkZjgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNjOWMyYjYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0idXJsKCNiZykiLz48cmVjdCB5PSI0NDAiIHdpZHRoPSI5MDAiIGhlaWdodD0iMTYwIiBmaWxsPSIjNzY1MTNhIi8+PGVsbGlwc2UgY3g9IjQ1NSIgY3k9IjQ3MCIgcng9IjIzNSIgcnk9IjQwIiBmaWxsPSIjMzMyNTFhIiBvcGFjaXR5PSIuMiIvPjxwYXRoIGQ9Ik0yODUgMjIwaDM0MGwtMzUgMjQwcS0xMzUgNjUtMjcwIDB6IiBmaWxsPSJ1cmwoI2N1cCkiIHN0cm9rZT0iI2E2OWQ5MCIgc3Ryb2tlLXdpZHRoPSI3Ii8+PHBhdGggZD0iTTYyNSAyNzBxMTU1LTI1IDEwNSAxMTBxLTI1IDY1LTE0NSA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTllNGQ5IiBzdHJva2Utd2lkdGg9IjI4Ii8+PGVsbGlwc2UgY3g9IjQ1NSIgY3k9IjIyNSIgcng9IjE3MCIgcnk9IjM1IiBmaWxsPSIjM2IyNDE4Ii8+PGVsbGlwc2UgY3g9IjQ1NSIgY3k9IjIyMCIgcng9IjE0MCIgcnk9IjI1IiBmaWxsPSIjYjc3YzQzIi8+PHBhdGggZD0iTTM4NSAyMjBxNzAtNjAgMTQwIDBxLTcwIDYwLTE0MCAwIiBmaWxsPSIjZjVlNmM5Ii8+PHBhdGggZD0iTTQyMCAyMjBxMzUtMzIgNzAgMHEtMzUgMzAtNzAgMCIgZmlsbD0iI2Y1ZTZjOSIvPjx0ZXh0IHg9IjYwIiB5PSI4MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9IiM0OTM4MmEiPlRIRSBEQUlMWSBDT0ZGRUUgUklUVUFMPC90ZXh0Pjwvc3ZnPg==')"></div><div class="card-body"><div class="eyebrow">El ritual diario</div><h3>Make time for the pour.</h3><p>Thoughtful tools make the process more consistent and enjoyable.</p></div></div>
+    <div class="card"><div class="card-img" style="height:260px;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAwIDkwMCI+CjxkZWZzPgogPGxpbmVhckdyYWRpZW50IGlkPSJ3YWxsIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNlOGRmZDAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNjYmJkYTgiLz48L2xpbmVhckdyYWRpZW50PgogPGxpbmVhckdyYWRpZW50IGlkPSJzdGVlbCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZjdmOGY1Ii8+PHN0b3Agb2Zmc2V0PSIuMzUiIHN0b3AtY29sb3I9IiM5ZWE2YTEiLz48c3RvcCBvZmZzZXQ9Ii42NSIgc3RvcC1jb2xvcj0iI2U1ZThlMyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzYyNmQ2OCIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9Indvb2QiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzlhNjg0NSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzU1MzkyNyIvPjwvbGluZWFyR3JhZGllbnQ+CiA8bGluZWFyR3JhZGllbnQgaWQ9ImN1cCIgeDI9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZmZGY2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjY2ZjOWJkIi8+PC9saW5lYXJHcmFkaWVudD4KIDxmaWx0ZXIgaWQ9InNoYWRvdyI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMjIiLz48L2ZpbHRlcj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjd2FsbCkiLz48cmVjdCB4PSIxMDAiIHk9IjAiIHdpZHRoPSIzMzAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjVlZGRmIiBvcGFjaXR5PSIuNiIvPjxwYXRoIGQ9Ik0xMDAgMHY2MDBNNDMwIDB2NjAwIiBzdHJva2U9IiNiOWFkOWIiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjUiLz4KPGVsbGlwc2UgY3g9Ijc0MCIgY3k9Ijc0MCIgcng9IjU1MCIgcnk9IjY1IiBmaWxsPSIjMmIyMTE5IiBvcGFjaXR5PSIuMiIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KPHJlY3QgeT0iNjcwIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIyMzAiIGZpbGw9InVybCgjd29vZCkiLz48cGF0aCBkPSJNMCA3MzBoMTQwME0wIDgxNWgxNDAwIiBzdHJva2U9IiNjMjhkNWYiIHN0cm9rZS13aWR0aD0iNSIgb3BhY2l0eT0iLjMiLz4KPCEtLSBtYWNoaW5lIGJvZHkgLS0+CjxyZWN0IHg9IjM5MCIgeT0iMjIwIiB3aWR0aD0iNTcwIiBoZWlnaHQ9IjQzMCIgcng9IjI4IiBmaWxsPSJ1cmwoI3N0ZWVsKSIgc3Ryb2tlPSIjNTk2MzVlIiBzdHJva2Utd2lkdGg9IjgiLz4KPHJlY3QgeD0iNDI1IiB5PSIyNTAiIHdpZHRoPSI1MDAiIGhlaWdodD0iODAiIHJ4PSIxMiIgZmlsbD0iIzI2MzEyZCIvPjxyZWN0IHg9IjQ2MCIgeT0iMjY4IiB3aWR0aD0iMTY1IiBoZWlnaHQ9IjQwIiByeD0iNiIgZmlsbD0iI2Q1YzZhOSIvPgo8Y2lyY2xlIGN4PSI4MjUiIGN5PSIyOTAiIHI9IjE3IiBmaWxsPSIjYjc4YTRmIi8+PGNpcmNsZSBjeD0iODc1IiBjeT0iMjkwIiByPSIxNyIgZmlsbD0iI2I3OGE0ZiIvPgo8cmVjdCB4PSI0NzAiIHk9IjM2NSIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiM2OTczNmUiLz48cmVjdCB4PSI1MDAiIHk9IjM4NSIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiNkZmUzZGYiLz4KPHBhdGggZD0iTTY1MCA0MDB2OTVoLTI1djMwaDc1di0zMGgtMjV2LTk1IiBmaWxsPSIjMzAzYTM1Ii8+CjxwYXRoIGQ9Ik03MDAgNTI0YzAgMjgtMTYgNDQtMTYgNDQiIHN0cm9rZT0iIzVjMzMyMCIgc3Ryb2tlLXdpZHRoPSI3IiBmaWxsPSJub25lIi8+CjxyZWN0IHg9IjU2NSIgeT0iNTU1IiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzUwNWI1NSIvPjxwYXRoIGQ9Ik01NzUgNTc1aDIwMGwtMjIgNDhINTk3eiIgZmlsbD0iIzdiODU4MCIvPgo8IS0tIHN0ZWFtIHdhbmQgLS0+CjxwYXRoIGQ9Ik05MDAgNDEwaDQ1djEzNSIgc3Ryb2tlPSIjNzI3ZDc3IiBzdHJva2Utd2lkdGg9IjE3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNOTQ1IDU0NXEtNSAyNiAxMiAzNSIgc3Ryb2tlPSIjZTVlOWU0IiBzdHJva2Utd2lkdGg9IjEyIiBmaWxsPSJub25lIi8+CjwhLS0gZ3JpbmRlciAtLT4KPHJlY3QgeD0iMTAxMCIgeT0iMzY1IiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjI4MCIgcng9IjIyIiBmaWxsPSIjMjgzMzJkIi8+PHJlY3QgeD0iMTAzMCIgeT0iMzAwIiB3aWR0aD0iMTUwIiBoZWlnaHQ9Ijk1IiByeD0iMTgiIGZpbGw9IiM1NzRjM2QiLz48cGF0aCBkPSJNMTA0MiAzMTBoMTI1bC0xOC04MGgtODh6IiBmaWxsPSIjYjlhNjhjIiBvcGFjaXR5PSIuOCIvPjxyZWN0IHg9IjEwNDAiIHk9IjQ0NSIgd2lkdGg9IjEzMCIgaGVpZ2h0PSI5MCIgcng9IjEyIiBmaWxsPSIjNDk1NjRlIi8+PGNpcmNsZSBjeD0iMTEwNSIgY3k9IjQ5MCIgcj0iMjMiIGZpbGw9IiNkNGM1YTYiLz48Y2lyY2xlIGN4PSIxMTA1IiBjeT0iNDkwIiByPSI5IiBmaWxsPSIjM2U0OTNmIi8+CjwhLS0gY3VwIC0tPgo8ZWxsaXBzZSBjeD0iODMwIiBjeT0iNzAwIiByeD0iODMiIHJ5PSIxNiIgZmlsbD0iIzM4MmEyMCIgb3BhY2l0eT0iLjI1Ii8+PHBhdGggZD0iTTc2MCA2MjBoMTMwbC0xMyA5MnEtNTIgMzUtMTA0IDB6IiBmaWxsPSJ1cmwoI2N1cCkiIHN0cm9rZT0iI2E4YTE5NiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZD0iTTg5MCA2NDBxNzAtMTAgNDggNDhxLTEyIDMwLTU2IDIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNkOGQxYzUiIHN0cm9rZS13aWR0aD0iMTgiLz48ZWxsaXBzZSBjeD0iODI1IiBjeT0iNjIzIiByeD0iNjUiIHJ5PSIxMyIgZmlsbD0iIzRiMmQxZCIvPjxlbGxpcHNlIGN4PSI4MjUiIGN5PSI2MjAiIHJ4PSI1MiIgcnk9IjgiIGZpbGw9IiNjMThiNGUiLz4KPCEtLSBiZWFucyAtLT4KPGcgZmlsbD0iIzRhMmMxZCI+PGVsbGlwc2UgY3g9IjI3MCIgY3k9IjcyNSIgcng9IjIwIiByeT0iMTIiIHRyYW5zZm9ybT0icm90YXRlKDI1IDI3MCA3MjUpIi8+PHBhdGggZD0iTTI2MCA3MTVxMTIgMTIgMjAgMjAiIHN0cm9rZT0iI2JkOGI1YiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PGVsbGlwc2UgY3g9IjMxNSIgY3k9IjcwMCIgcng9IjE4IiByeT0iMTEiIHRyYW5zZm9ybT0icm90YXRlKC0yNSAzMTUgNzAwKSIvPjxwYXRoIGQ9Ik0zMDQgNjk0cTEwIDEwIDIwIDE0IiBzdHJva2U9IiNiZDhiNWIiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxlbGxpcHNlIGN4PSIzNTAiIGN5PSI3MzUiIHJ4PSIyMCIgcnk9IjEyIi8+PHBhdGggZD0iTTMzOSA3MjVxMTIgMTIgMjIgMjAiIHN0cm9rZT0iI2JkOGI1YiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PC9nPgo8dGV4dCB4PSI5MCIgeT0iMTE1IiBmb250LWZhbWlseT0iR2VvcmdpYSIgZm9udC1zaXplPSIzNCIgZmlsbD0iIzVjNWE0ZiIgbGV0dGVyLXNwYWNpbmc9IjciPlRIRSBIT01FIEJBUklTVEEgSk9VUk5BTDwvdGV4dD4KPC9zdmc+')"></div><div class="card-body"><div class="eyebrow">Café en casa</div><h3>Your own little café.</h3><p>Create a welcoming coffee corner that fits your space and routine.</p></div></div>
+  </div>
+</section>
+<section class="feature" id="about"><div class="feature-inner"><div><div class="eyebrow">Nuestra filosofía de compra</div><h2>Less hype.<br>More useful advice.</h2><p>Los buenos equipos de café deben merecer su lugar en tu encimera. Nos enfocamos en las diferencias prácticas, para quién es cada producto, qué debes considerar antes de comprar y cuándo realmente vale la pena gastar más.</p><a class="btn" style="background:#f5f2ec;color:#34483b;border-color:#f5f2ec;margin-top:15px" href="#guides">Ver nuestras guías</a></div><div class="feature-image"></div></div></section>
+<section class="section" id="guides">
+  <div class="section-head"><div><div class="eyebrow">Elige con confianza</div><h2>Guías que vale la pena leer.</h2></div><p>Puntos de partida útiles para investigar tu próxima mejora de café.</p></div>
+  <div class="guide-grid">
+    <a class="guide" href="buying-guide-es.html"><div><small>Buying guide / 01</small><h3>Las mejores cafeteras espresso para casa en 2026</h3></div><span>Leer la guía →</span></a>
+    <a class="guide" href="#grinders"><div><small>Buying guide / 02</small><h3>Por qué tu molino importa más de lo que crees</h3></div><span>Próximamente →</span></a>
+    <a class="guide" href="#machines"><div><small>Comparison / 03</small><h3>Cafeteras espresso manuales vs. automáticas</h3></div><span>Próximamente →</span></a>
+  </div>
+</section>
+<section class="newsletter">
+  <div class="eyebrow">La nota de Brewcraft</div><h2>Haz que cada taza cuente.</h2><p>Guías ocasionales de equipos y consejos prácticos de café. Sin ruido innecesario.</p>
+  <form class="signup" onsubmit="event.preventDefault();alert('Demo form: connect an email service before publishing.');"><input type="email" placeholder="Your email address" required aria-label="Your email address"><button type="submit">Unirme a la lista</button></form>
+  <div class="disclosure">Como asociado de Amazon, obtengo ingresos por compras que cumplen los requisitos. Brewcraft también puede recibir comisiones por compras que cumplen los requisitos a través de enlaces de otros comercios. Esto no afecta el precio que pagas. Nuestro objetivo es ofrecer información útil sobre productos, investigada de forma independiente.</div>
+</section>
+</main>
+<footer class="footer"><div class="footer-inner"><div><a class="logo" href="#" style="color:#f3eee4">BREW<span>CRAFT</span></a><p>Equipos bien pensados para preparar mejor café en casa.</p></div><div class="footer-links"><a href="#about">Acerca de</a><a href="#guides">Guías</a><a href="#">Privacidad</a><a href="#">Aviso de afiliación</a></div></div></footer>
+
+<script>
+(function(){
+  const budget = document.getElementById('finder-budget');
+  const style = document.getElementById('finder-style');
+  const experience = document.getElementById('finder-experience');
+  const priority = document.getElementById('finder-priority');
+  const grid = document.getElementById('finder-result-grid');
+  const submit = document.getElementById('finder-submit');
+  const reset = document.getElementById('finder-reset');
+
+  const products = [
+    {name:'Breville Bambino', kind:'espresso', price:300, priceText:'Alrededor de $300', tag:'Compact starter pick', desc:'A compact manual espresso machine with fast heat-up. A practical entry point if you want to learn espresso basics.', url:'https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20', beginner:3, some:2, enthusiast:1, easy:1, control:2, value:3},
+    {name:'Breville Bambino Plus', kind:'milk', price:500, priceText:'Alrededor de $500', tag:'La opción más cómoda', desc:'Adds automatic milk texturing, making it appealing if cappuccinos and lattes are part of your everyday routine.', url:'https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20', beginner:3, some:2, enthusiast:1, easy:3, control:1, value:1},
+    {name:'Gaggia Classic Pro E24', kind:'espresso', price:575, priceText:'Alrededor de $550–$600', tag:'Hands-on enthusiast pick', desc:'A traditional single-boiler machine with a 58 mm portafilter and a more involved manual workflow.', url:'https://www.gaggia.com/manual-machines/new-classic-e24/', beginner:1, some:3, enthusiast:3, easy:0, control:3, value:2},
+    {name:'Breville Barista Express', kind:'milk', price:700, priceText:'Around $700', tag:'All-in-one option', desc:'Combines an espresso machine and built-in grinder to reduce the number of separate purchases.', url:'https://www.amazon.com/dp/B00CH9QWOU?tag=smartfin0e6fa-20', beginner:2, some:2, enthusiast:1, easy:2, control:1, value:2},
+    {name:'Fellow Opus Grinder', kind:'filter', price:200, priceText:'Around $200', tag:'Versatile grinder pick', desc:'A compact all-purpose electric grinder to consider for a range of brew methods, including filter coffee.', url:'https://www.amazon.com/dp/B0BV96VPSR?tag=smartfin0e6fa-20', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:2},
+    {name:'Baratza Encore Grinder', kind:'filter', price:150, priceText:'Around $150', tag:'Filter coffee value pick', desc:'A straightforward burr grinder often considered for everyday drip and pour-over brewing.', url:'https://www.amazon.com/dp/B007F183LK?tag=smartfin0e6fa-20', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:3}
+  ];
+
+  function getRecommendations(){
+    const b = budget.value, s = style.value, e = experience.value, p = priority.value;
+    let pool = products.filter(item => {
+      if(s === 'filter') return item.kind === 'filter';
+      if(s === 'milk') return item.kind === 'milk' || item.kind === 'espresso';
+      return item.kind === 'espresso' || item.kind === 'milk';
+    });
+    if(s !== 'filter'){
+      pool = pool.filter(item => {
+        if(b === 'under400') return item.price <= 400;
+        if(b === '400to700') return item.price >= 300 && item.price <= 700;
+        return item.price >= 500;
+      });
+    } else {
+      pool = pool.filter(item => {
+        if(b === 'under400') return item.price <= 400;
+        if(b === '400to700') return item.price <= 700;
+        return true;
+      });
+    }
+    if(!pool.length) pool = products.filter(item => s === 'filter' ? item.kind === 'filter' : item.kind !== 'filter');
+
+    const skillKey = e === 'beginner' ? 'beginner' : e === 'some' ? 'some' : 'enthusiast';
+    const scored = pool.map(item => {
+      let score = item[skillKey] + item[p];
+      if(s === 'milk' && item.kind === 'milk') score += 3;
+      if(s === 'espresso' && item.kind === 'espresso') score += 2;
+      if(s === 'filter' && item.kind === 'filter') score += 3;
+      if(b === 'under400' && item.price <= 300) score += 2;
+      if(b === 'over700' && item.price >= 500) score += 1;
+      return {item, score};
+    }).sort((a,b) => b.score - a.score || a.item.price - b.item.price);
+    return scored.slice(0,3).map(x => x.item);
+  }
+
+  function render(){
+    const picks = getRecommendations();
+    grid.innerHTML = picks.map((item,index) => `
+      <article class="finder-result">
+        <div class="match-tag">${index === 0 ? 'Closest match' : item.tag}</div>
+        <h4>${item.name}</h4>
+        <p>${item.desc}</p>
+        <div class="finder-price">${item.priceText}</div>
+        <a href="${item.url}" target="_blank" rel="noopener noreferrer">Ver en Amazon</a>
+      </article>`).join('');
+    const heading = document.querySelector('.finder-results-head h3');
+    if(heading) heading.textContent = style.value === 'filter' ? 'Your filter coffee shortlist' : 'Your espresso shortlist';
+  }
+
+  submit.addEventListener('click', render);
+  reset.addEventListener('click', function(){
+    budget.value='400to700'; style.value='espresso'; experience.value='beginner'; priority.value='easy'; render();
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
