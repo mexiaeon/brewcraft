@@ -21,6 +21,10 @@
 .product-label{position:absolute;top:14px;left:14px;z-index:1;background:var(--green);color:#fff;padding:8px 10px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
 .product-art{height:220px;background:linear-gradient(145deg,#eee9df,#d8d0c2);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .product-art svg{height:88%;width:90%;max-width:310px}
+.product-art.product-photo{background:#f5f2ec;padding:10px}
+.product-art.product-photo img{display:block;width:100%;height:100%;object-fit:contain}
+.photo-credit{font-size:9px;line-height:1.4;color:#77766f;background:#f5f2ec;padding:0 12px 9px;text-align:right}
+.photo-credit a{text-decoration:underline;color:#34483b}
 .product-content{padding:22px;display:flex;flex-direction:column;flex:1}
 .product-kicker{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--green2);font-weight:700}
 .product-content h3{font:normal 24px/1.12 Georgia,serif;margin:9px 0 8px}
@@ -172,21 +176,10 @@
     <div class="product-grid">
       <article class="product-card">
         <div class="product-label">Entry-level pick</div>
-        <div class="product-art" aria-label="Illustration of a compact stainless espresso machine" role="img">
-          <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="160" cy="197" rx="112" ry="10" fill="#8b7860" opacity=".22"/>
-            <rect x="72" y="32" width="176" height="145" rx="13" fill="#89918b" stroke="#4d5751" stroke-width="3"/>
-            <rect x="88" y="45" width="144" height="25" rx="5" fill="#29342f"/>
-            <circle cx="118" cy="57" r="5" fill="#c7a56d"/><circle cx="143" cy="57" r="5" fill="#c7a56d"/><circle cx="168" cy="57" r="5" fill="#c7a56d"/>
-            <rect x="105" y="87" width="110" height="12" rx="5" fill="#d7d9d3"/>
-            <path d="M153 99v34h-9v14h32v-14h-9V99" fill="#424b45"/>
-            <path d="M164 147v15" stroke="#d5c7a9" stroke-width="3"/>
-            <rect x="93" y="164" width="134" height="8" rx="3" fill="#3c4640"/>
-            <path d="M226 107h20v42h-20" fill="none" stroke="#4d5751" stroke-width="5"/>
-            <path d="M245 147q14 6 0 15" fill="none" stroke="#d5c7a9" stroke-width="3"/>
-            <path d="M115 177h90" stroke="#e6e3da" stroke-width="4"/>
-          </svg>
+        <div class="product-art product-photo" role="img" aria-label="Photograph of a Breville Bambino espresso machine">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Breville_Bambino_with_bottomless_portafilter_and_scale..webp" alt="Breville Bambino espresso machine with a bottomless portafilter and espresso scale">
         </div>
+        <div class="photo-credit">Photo: Weirdwiki64 · <a href="https://commons.wikimedia.org/wiki/File:Breville_Bambino_with_bottomless_portafilter_and_scale..webp" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></div>
         <div class="product-content">
           <div class="product-kicker">Simple, compact, capable</div>
           <h3>Breville Bambino</h3>
