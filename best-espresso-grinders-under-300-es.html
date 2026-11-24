@@ -47,4 +47,27 @@
 <p class="note">Los precios son referencias aproximadas en dólares estadounidenses y pueden cambiar según el vendedor, el inventario y las ofertas. Confirma el precio final antes de comprar. Los enlaces de Amazon pueden generar una comisión para Brewcraft sin costo adicional para ti.</p>
 <div class="footer"><a href="index-es.html">Inicio</a> · <a href="grinder-guide-es.html">Guía de molinos</a> · BREWCRAFT</div>
 </main>
+<style>
+.image-fallback{width:100%;min-height:220px;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;background:linear-gradient(145deg,#f0ede6,#e3ded3);border:1px solid #d8d1c4;color:#34483b;text-align:center}
+.image-fallback .fallback-brand{font:700 12px Georgia,serif;letter-spacing:.22em;color:#8a7658}
+.image-fallback strong{font:600 16px Georgia,serif;max-width:26ch}
+.image-fallback small{font:11px system-ui,sans-serif;color:#707169}
+</style>
+<script>
+(function(){
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('error',function(){
+      if(img.dataset.fallbackShown)return;
+      img.dataset.fallbackShown='1';
+      var fallback=document.createElement('div');
+      fallback.className='image-fallback';
+      var brand=document.createElement('span');brand.className='fallback-brand';brand.textContent='BREWCRAFT';
+      var name=document.createElement('strong');name.textContent=img.getAttribute('alt')||'Coffee equipment';
+      var note=document.createElement('small');note.textContent='Product photo temporarily unavailable';
+      fallback.append(brand,name,note);
+      img.replaceWith(fallback);
+    },{once:true});
+  });
+})();
+</script>
 </body></html>
