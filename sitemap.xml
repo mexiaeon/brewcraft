@@ -1,17 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mexiaeon.github.io/brewcraft/</loc>
+    <loc>https://mexiaeon.github.io/brewcraft/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mexiaeon.github.io/brewcraft/breville-bambino-review.html</loc>
+    <loc>https://mexiaeon.github.io/brewcraft/index-es.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mexiaeon.github.io/brewcraft/buying-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mexiaeon.github.io/brewcraft/buying-guide-es.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mexiaeon.github.io/brewcraft/grinder-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mexiaeon.github.io/brewcraft/grinder-guide-es.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mexiaeon.github.io/brewcraft/breville-bambino-plus-review.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mexiaeon.github.io/brewcraft/breville-bambino-plus-review.html</loc>
+    <loc>https://mexiaeon.github.io/brewcraft/breville-bambino-plus-review-es.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,4 +45,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>\n    <loc>https://mexiaeon.github.io/brewcraft/buying-guide.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>https://mexiaeon.github.io/brewcraft/buying-guide-es.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n<url><loc>https://mexiaeon.github.io/brewcraft/index-es.html</loc></url><url><loc>https://mexiaeon.github.io/brewcraft/breville-bambino-review-es.html</loc></url><url><loc>https://mexiaeon.github.io/brewcraft/breville-bambino-plus-review-es.html</loc></url><url><loc>https://mexiaeon.github.io/brewcraft/gaggia-classic-e24-review-es.html</loc></url></urlset>
+  <url>
+    <loc>https://mexiaeon.github.io/brewcraft/gaggia-classic-e24-review-es.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
