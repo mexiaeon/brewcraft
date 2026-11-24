@@ -159,7 +159,7 @@
       <div class="finder-result-grid" id="finder-result-grid">
         <article class="finder-result"><div class="match-tag">Un buen primer paso</div><h4>Breville Bambino</h4><p>Una cafetera espresso manual y compacta para aprender lo esencial sin ocupar demasiado espacio en la encimera.</p><div class="finder-price">Alrededor de $300</div><a href="https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver en Amazon</a></article>
         <article class="finder-result"><div class="match-tag">La opción más cómoda</div><h4>Breville Bambino Plus</h4><p>Una opción compacta con texturización automática de leche, ideal para quienes preparan bebidas con leche con frecuencia.</p><div class="finder-price">Alrededor de $500</div><a href="https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver en Amazon</a></article>
-        <article class="finder-result"><div class="match-tag">La opción más manual</div><h4>Gaggia Classic Pro E24</h4><p>Una máquina tradicional que requiere más participación y te permite perfeccionar tu técnica.</p><div class="finder-price">Alrededor de $550–$600</div><a href="https://www.gaggia.com/manual-machines/new-classic-e24/" target="_blank" rel="noopener noreferrer">Ver en Amazon</a></article>
+        <article class="finder-result"><div class="match-tag">La opción más manual</div><h4>Gaggia Classic Pro E24</h4><p>Una máquina tradicional que requiere más participación y te permite perfeccionar tu técnica.</p><div class="finder-price">Alrededor de $550–$600</div><a href="https://www.gaggia.com/manual-machines/new-classic-e24/" target="_blank" rel="noopener noreferrer">Ver en Gaggia</a></article>
       </div>
       <p class="finder-note">Estas recomendaciones son puntos de partida basados en investigación, no resultados de pruebas personalizadas ni garantías. Los precios y la disponibilidad cambian. Un buen molino también es importante para preparar espresso; estas máquinas no incluyen uno.</p>
     </div>
@@ -276,12 +276,12 @@
   const reset = document.getElementById('finder-reset');
 
   const products = [
-    {name:'Breville Bambino', kind:'espresso', price:300, priceText:'Alrededor de $300', tag:'La mejor relación calidad-precio para empezar', desc:'Una máquina manual y compacta con calentamiento rápido. Elígela si quieres aprender a preparar espresso y no te molesta vaporizar la leche manualmente.', url:'https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', beginner:3, some:2, enthusiast:1, easy:1, control:2, value:3},
-    {name:'Breville Bambino Plus', kind:'milk', price:500, priceText:'Alrededor de $500', tag:'La mejor para bebidas con leche a diario', desc:'Añade texturización automática de leche. Elígela si preparas cappuccinos o lattes con frecuencia y valoras la comodidad.', url:'https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', beginner:3, some:2, enthusiast:1, easy:3, control:1, value:1},
-    {name:'Gaggia Classic Pro E24', kind:'espresso', price:575, priceText:'Alrededor de $550–$600', tag:'Para aficionados al espresso manual', desc:'Una máquina tradicional de caldera única con portafiltro de 58 mm. Elígela si buscas un proceso manual más completo y quieres perfeccionar tu técnica.', url:'https://www.gaggia.com/manual-machines/new-classic-e24/', retailerLabel:'Ver en Gaggia', beginner:1, some:3, enthusiast:3, easy:0, control:3, value:2},
-    {name:'Breville Barista Express', kind:'milk', price:700, priceText:'Around $700', tag:'All-in-one option', desc:'Combines an espresso machine and built-in grinder to reduce the number of separate purchases.', url:'https://www.amazon.com/dp/B00CH9QWOU?tag=smartfin0e6fa-20', beginner:2, some:2, enthusiast:1, easy:2, control:1, value:2},
-    {name:'Fellow Opus Grinder', kind:'filter', price:200, priceText:'Around $200', tag:'Versatile grinder pick', desc:'A compact all-purpose electric grinder to consider for a range of brew methods, including filter coffee.', url:'https://www.amazon.com/dp/B0BV96VPSR?tag=smartfin0e6fa-20', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:2},
-    {name:'Baratza Encore Grinder', kind:'filter', price:150, priceText:'Around $150', tag:'Filter coffee value pick', desc:'A straightforward burr grinder often considered for everyday drip and pour-over brewing.', url:'https://www.amazon.com/dp/B007F183LK?tag=smartfin0e6fa-20', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:3}
+    {name:'Breville Bambino', kind:'espresso', price:300, priceText:'Alrededor de $300', tag:'La mejor relación calidad-precio para empezar', desc:'Una máquina manual y compacta con calentamiento rápido. Elígela si quieres aprender a preparar espresso y no te molesta vaporizar la leche manualmente.', url:'https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:1, control:2, value:3},
+    {name:'Breville Bambino Plus', kind:'milk', price:500, priceText:'Alrededor de $500', tag:'La mejor para bebidas con leche a diario', desc:'Añade texturización automática de leche. Elígela si preparas cappuccinos o lattes con frecuencia y valoras la comodidad.', url:'https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:3, control:1, value:1},
+    {name:'Gaggia Classic Pro E24', kind:'espresso', price:575, priceText:'Alrededor de $550–$600', tag:'Para aficionados al espresso manual', desc:'Una máquina tradicional de caldera única con portafiltro de 58 mm. Elígela si buscas un proceso manual más completo y quieres perfeccionar tu técnica.', url:'https://www.gaggia.com/manual-machines/new-classic-e24/', retailerLabel:'Ver en Gaggia', linkRel:'noopener noreferrer', beginner:1, some:3, enthusiast:3, easy:0, control:3, value:2},
+    {name:'Breville Barista Express', kind:'milk', price:700, priceText:'Alrededor de $700', tag:'Opción todo en uno', desc:'Combina una cafetera espresso y un molino integrado, así que no necesitas comprar un molino por separado para empezar.', url:'https://www.amazon.com/dp/B00CH9QWOU?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', linkRel:'sponsored nofollow noopener noreferrer', beginner:2, some:2, enthusiast:1, easy:2, control:1, value:2},
+    {name:'Fellow Opus Grinder', kind:'filter', price:200, priceText:'Alrededor de $200', tag:'Molino versátil', desc:'Un molino eléctrico compacto que puedes considerar si buscas un solo equipo para distintos métodos de preparación.', url:'https://www.amazon.com/dp/B0BV96VPSR?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:2},
+    {name:'Baratza Encore Grinder', kind:'filter', price:150, priceText:'Alrededor de $150', tag:'Buena opción para café filtrado', desc:'Un molino de muelas sencillo que puedes considerar para preparar café de goteo y pour-over a diario.', url:'https://www.amazon.com/dp/B007F183LK?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:3}
   ];
 
   function getRecommendations(){
@@ -323,14 +323,14 @@
     const picks = getRecommendations();
     grid.innerHTML = picks.map((item,index) => `
       <article class="finder-result">
-        <div class="match-tag">${index === 0 ? 'Closest match' : item.tag}</div>
+        <div class="match-tag">${index === 0 ? 'La opción que mejor coincide' : item.tag}</div>
         <h4>${item.name}</h4>
         <p>${item.desc}</p>
         <div class="finder-price">${item.priceText}</div>
         <a href="${item.url}" target="_blank" rel="sponsored nofollow noopener noreferrer">${item.retailerLabel}</a>
       </article>`).join('');
     const heading = document.querySelector('.finder-results-head h3');
-    if(heading) heading.textContent = style.value === 'filter' ? 'Your filter coffee shortlist' : 'Your espresso shortlist';
+    if(heading) heading.textContent = style.value === 'filter' ? 'Tus molinos recomendados para café filtrado' : 'Tus cafeteras recomendadas';
   }
 
   submit.addEventListener('click', render);
