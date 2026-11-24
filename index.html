@@ -157,9 +157,9 @@
         <p>Based on the preferences selected above</p>
       </div>
       <div class="finder-result-grid" id="finder-result-grid">
-        <article class="finder-result"><div class="match-tag">Good first step</div><h4>Breville Bambino</h4><p>A compact manual espresso machine to learn the fundamentals without taking over your counter.</p><div class="finder-price">Around $300</div><a href="https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Explore on Amazon</a></article>
-        <article class="finder-result"><div class="match-tag">Convenience pick</div><h4>Breville Bambino Plus</h4><p>A compact option with automatic milk texturing for people who make milk drinks often.</p><div class="finder-price">Around $500</div><a href="https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Explore on Amazon</a></article>
-        <article class="finder-result"><div class="match-tag">Hands-on option</div><h4>Gaggia Classic Pro E24</h4><p>A traditional machine with a more hands-on workflow and room to develop your technique.</p><div class="finder-price">Around $550–$600</div><a href="https://www.gaggia.com/manual-machines/new-classic-e24/" target="_blank" rel="noopener noreferrer">View at Gaggia</a></article>
+        <article class="finder-result"><div class="match-tag">Best value for learning espresso</div><h4>Breville Bambino</h4><p>A compact manual espresso machine to learn the fundamentals without taking over your counter.</p><div class="finder-price">Around $300</div><a href="https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Explore on Amazon</a></article>
+        <article class="finder-result"><div class="match-tag">Best for everyday milk drinks</div><h4>Breville Bambino Plus</h4><p>A compact option with automatic milk texturing for people who make milk drinks often.</p><div class="finder-price">Around $500</div><a href="https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Explore on Amazon</a></article>
+        <article class="finder-result"><div class="match-tag">Best for manual control</div><h4>Gaggia Classic Pro E24</h4><p>A traditional machine with a more hands-on workflow and room to develop your technique.</p><div class="finder-price">Around $550–$600</div><a href="https://www.gaggia.com/manual-machines/new-classic-e24/" target="_blank" rel="noopener noreferrer">View at Gaggia</a></article>
       </div>
       <p class="finder-note">These are research starting points, not personalized testing results or guarantees. Prices and availability change. A capable grinder is also important for espresso; these machines do not include one.</p>
     </div>
@@ -327,7 +327,7 @@
         <h4>${item.name}</h4>
         <p>${item.desc}</p>
         <div class="finder-price">${item.priceText}</div>
-        <a href="${item.url}" target="_blank" rel="${item.linkRel}" >${item.retailerLabel}</a>
+        <a href="${item.url}" target="_blank" rel="${item.linkRel}">${item.retailerLabel}</a>
       </article>`).join('');
     const heading = document.querySelector('.finder-results-head h3');
     if(heading) heading.textContent = style.value === 'filter' ? 'Your filter coffee shortlist' : 'Your espresso shortlist';
