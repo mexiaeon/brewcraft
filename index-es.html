@@ -75,6 +75,19 @@
 .finder-result .finder-price{font:normal 20px Georgia,serif;margin-top:auto;margin-bottom:14px}
 .finder-result a{display:block;text-align:center;background:var(--green);color:white;padding:12px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .finder-note{font-size:10px;color:var(--muted);line-height:1.7;margin:16px 0 0}
+.finder-results.is-hidden{display:none}
+.finder-results{scroll-margin-top:24px}
+.finder-result{opacity:0;transform:translateY(12px);animation:finderRise .45s ease forwards}
+.finder-result:nth-child(2){animation-delay:.08s}.finder-result:nth-child(3){animation-delay:.16s}
+.finder-result.top-match{border-color:#9aa88f;box-shadow:0 10px 28px rgba(52,72,59,.10)}
+.finder-result.top-match .match-tag{display:inline-flex;align-items:center;gap:6px;background:#e7eee5;padding:7px 9px;align-self:flex-start}
+.finder-why{font-size:11px;line-height:1.6;background:#f0ece4;padding:11px 12px;margin:0 0 16px;color:#5f6259}
+.finder-result a{text-decoration:none;transition:background .2s,transform .2s}
+.finder-result a:hover{background:#526b58;transform:translateY(-2px)}
+#finder-submit{cursor:pointer;transition:transform .2s,background .2s}
+#finder-submit:hover{transform:translateY(-2px);background:#526b58}
+@keyframes finderRise{to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.finder-result{animation:none;opacity:1;transform:none}html{scroll-behavior:auto}}
 @media(max-width:850px){.finder-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.finder-result-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.finder-wrap{padding:56px 18px}.finder-panel{padding:20px}.finder-fields,.finder-result-grid{grid-template-columns:1fr}.finder-results-head{display:block}.finder-results-head p{margin-top:8px}}
 
@@ -155,16 +168,12 @@
         <button class="finder-reset" id="finder-reset" type="button">Restablecer opciones</button>
       </div>
     </div>
-    <div class="finder-results" id="finder-results" aria-live="polite">
+    <div class="finder-results is-hidden" id="finder-results" aria-live="polite">
       <div class="finder-results-head">
         <h3>Tus primeras recomendaciones</h3>
         <p>Según las preferencias que seleccionaste</p>
       </div>
-      <div class="finder-result-grid" id="finder-result-grid">
-        <article class="finder-result"><div class="match-tag">Mejor relación calidad-precio para empezar</div><h4>Breville Bambino</h4><p>Una cafetera espresso manual y compacta para aprender lo esencial sin ocupar demasiado espacio en la encimera.</p><div class="finder-price">Alrededor de $300</div><a href="https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Consultar precio en Amazon</a></article>
-        <article class="finder-result"><div class="match-tag">Ideal para bebidas con leche a diario</div><h4>Breville Bambino Plus</h4><p>Una opción compacta con texturización automática de leche, ideal para quienes preparan bebidas con leche con frecuencia.</p><div class="finder-price">Alrededor de $500</div><a href="https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Consultar precio en Amazon</a></article>
-        <article class="finder-result"><div class="match-tag">Ideal para el control manual</div><h4>Gaggia Classic Pro E24</h4><p>Una máquina tradicional que requiere más participación y te permite perfeccionar tu técnica.</p><div class="finder-price">Alrededor de $550–$600</div><a href="https://www.gaggia.com/manual-machines/new-classic-e24/" target="_blank" rel="noopener noreferrer">Ver en Gaggia</a></article>
-      </div>
+      <div class="finder-result-grid" id="finder-result-grid"></div>
       <p class="finder-note">Estas recomendaciones son puntos de partida basados en investigación, no resultados de pruebas personalizadas ni garantías. Los precios y la disponibilidad cambian. Un buen molino también es importante para preparar espresso; estas máquinas no incluyen uno.</p>
     </div>
   </div>
@@ -267,77 +276,43 @@
 
 <script>
 (function(){
-  const budget = document.getElementById('finder-budget');
-  const style = document.getElementById('finder-style');
-  const experience = document.getElementById('finder-experience');
-  const priority = document.getElementById('finder-priority');
-  const grid = document.getElementById('finder-result-grid');
-  const submit = document.getElementById('finder-submit');
-  const reset = document.getElementById('finder-reset');
-
-  const products = [
-    {name:'Breville Bambino', kind:'espresso', price:300, priceText:'Alrededor de $300', tag:'La mejor relación calidad-precio para empezar', desc:'Una máquina manual y compacta con calentamiento rápido. Elígela si quieres aprender a preparar espresso y no te molesta vaporizar la leche manualmente.', url:'https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:1, control:2, value:3},
-    {name:'Breville Bambino Plus', kind:'milk', price:500, priceText:'Alrededor de $500', tag:'La mejor para bebidas con leche a diario', desc:'Añade texturización automática de leche. Elígela si preparas cappuccinos o lattes con frecuencia y valoras la comodidad.', url:'https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:3, control:1, value:1},
-    {name:'Gaggia Classic Pro E24', kind:'espresso', price:575, priceText:'Alrededor de $550–$600', tag:'Para aficionados al espresso manual', desc:'Una máquina tradicional de caldera única con portafiltro de 58 mm. Elígela si buscas un proceso manual más completo y quieres perfeccionar tu técnica.', url:'https://www.gaggia.com/manual-machines/new-classic-e24/', retailerLabel:'Ver en Gaggia', linkRel:'noopener noreferrer', beginner:1, some:3, enthusiast:3, easy:0, control:3, value:2},
-    {name:'Breville Barista Express', kind:'milk', price:700, priceText:'Alrededor de $700', tag:'Opción todo en uno', desc:'Combina una cafetera espresso y un molino integrado, así que no necesitas comprar un molino por separado para empezar.', url:'https://www.amazon.com/dp/B00CH9QWOU?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', linkRel:'sponsored nofollow noopener noreferrer', beginner:2, some:2, enthusiast:1, easy:2, control:1, value:2},
-    {name:'Fellow Opus Grinder', kind:'filter', price:200, priceText:'Alrededor de $200', tag:'Molino versátil', desc:'Un molino eléctrico compacto que puedes considerar si buscas un solo equipo para distintos métodos de preparación.', url:'https://www.amazon.com/dp/B0BV96VPSR?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:2},
-    {name:'Baratza Encore Grinder', kind:'filter', price:150, priceText:'Alrededor de $150', tag:'Buena opción para café filtrado', desc:'Un molino de muelas sencillo que puedes considerar para preparar café de goteo y pour-over a diario.', url:'https://www.amazon.com/dp/B007F183LK?tag=smartfin0e6fa-20', retailerLabel:'Consultar precio en Amazon', linkRel:'sponsored nofollow noopener noreferrer', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:3}
-  ];
-
-  function getRecommendations(){
-    const b = budget.value, s = style.value, e = experience.value, p = priority.value;
-    let pool = products.filter(item => {
-      if(s === 'filter') return item.kind === 'filter';
-      if(s === 'milk') return item.kind === 'milk' || item.kind === 'espresso';
-      return item.kind === 'espresso' || item.kind === 'milk';
-    });
-    if(s !== 'filter'){
-      pool = pool.filter(item => {
-        if(b === 'under400') return item.price <= 400;
-        if(b === '400to700') return item.price >= 300 && item.price <= 700;
-        return item.price >= 500;
-      });
-    } else {
-      pool = pool.filter(item => {
-        if(b === 'under400') return item.price <= 400;
-        if(b === '400to700') return item.price <= 700;
-        return true;
-      });
+  function init(){
+    const budget=document.getElementById('finder-budget'), style=document.getElementById('finder-style');
+    const experience=document.getElementById('finder-experience'), priority=document.getElementById('finder-priority');
+    const grid=document.getElementById('finder-result-grid'), results=document.getElementById('finder-results');
+    const submit=document.getElementById('finder-submit'), reset=document.getElementById('finder-reset');
+    if(!budget||!style||!experience||!priority||!grid||!results||!submit||!reset) return;
+    const products=[
+      {name:'Breville Bambino',kind:'espresso',price:300,priceText:'Alrededor de $300',tag:'Mejor relación calidad-precio',desc:'Máquina manual compacta con calentamiento rápido. Buena para aprender espresso y vaporizar leche por tu cuenta.',url:'https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20',label:'Consultar precio en Amazon',beginner:3,some:2,enthusiast:1,easy:1,control:2,value:3,reason:'Una opción accesible para aprender los fundamentos del espresso.'},
+      {name:'Breville Bambino Plus',kind:'milk',price:500,priceText:'Alrededor de $500',tag:'Mejor para bebidas con leche',desc:'Añade texturización automática de leche para preparar cappuccinos y lattes con menos trabajo.',url:'https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20',label:'Consultar precio en Amazon',beginner:3,some:2,enthusiast:1,easy:3,control:1,value:1,reason:'La función automática ayuda a simplificar la rutina diaria.'},
+      {name:'Gaggia Classic Pro E24',kind:'espresso',price:575,priceText:'Alrededor de $550–$600',tag:'Para control manual',desc:'Máquina tradicional de caldera única y portafiltro de 58 mm para una rutina más práctica.',url:'https://www.gaggia.com/manual-machines/new-classic-e24/',label:'Ver en Gaggia',beginner:1,some:3,enthusiast:3,easy:0,control:3,value:2,reason:'Ofrece una experiencia manual para desarrollar técnica.'},
+      {name:'Breville Barista Express',kind:'milk',price:700,priceText:'Alrededor de $700',tag:'Sistema todo en uno',desc:'Combina cafetera espresso y molino integrado en un solo equipo.',url:'https://www.amazon.com/dp/B00CH9QWOU?tag=smartfin0e6fa-20',label:'Consultar precio en Amazon',beginner:2,some:2,enthusiast:1,easy:2,control:1,value:2,reason:'Integra molino y cafetera para reducir compras separadas.'},
+      {name:'Fellow Opus Grinder',kind:'filter',price:200,priceText:'Alrededor de $200',tag:'Molino versátil',desc:'Molino eléctrico para explorar distintos métodos de preparación.',url:'https://www.amazon.com/dp/B0BV96VPSR?tag=smartfin0e6fa-20',label:'Consultar precio en Amazon',beginner:3,some:2,enthusiast:1,easy:2,control:1,value:2,reason:'Una opción eléctrica para varios estilos de café.'},
+      {name:'Baratza Encore Grinder',kind:'filter',price:150,priceText:'Alrededor de $150',tag:'Buena opción para filtrado',desc:'Molino de muelas sencillo para café de goteo y pour-over.',url:'https://www.amazon.com/dp/B007F183LK?tag=smartfin0e6fa-20',label:'Consultar precio en Amazon',beginner:3,some:2,enthusiast:1,easy:2,control:1,value:3,reason:'Una alternativa sencilla para café filtrado.'}
+    ];
+    function recommend(){
+      const b=budget.value,s=style.value,e=experience.value,p=priority.value;
+      let pool=products.filter(x=>s==='filter'?x.kind==='filter':s==='milk'?x.kind==='milk'||x.kind==='espresso':x.kind!=='filter');
+      pool=pool.filter(x=>b==='under400'?x.price<=400:b==='400to700'?x.price>=300&&x.price<=700:x.price>=500);
+      if(!pool.length) pool=products.filter(x=>s==='filter'?x.kind==='filter':x.kind!=='filter');
+      return pool.map(x=>({item:x,score:x[e]+x[p]+(s==='milk'&&x.kind==='milk'?3:0)+(s==='espresso'&&x.kind==='espresso'?2:0)+(s==='filter'&&x.kind==='filter'?3:0)+(b==='under400'&&x.price<=300?2:0)+(b==='over700'&&x.price>=500?1:0)})).sort((a,b)=>b.score-a.score||a.item.price-b.item.price).slice(0,3).map(x=>x.item);
     }
-    if(!pool.length) pool = products.filter(item => s === 'filter' ? item.kind === 'filter' : item.kind !== 'filter');
-
-    const skillKey = e === 'beginner' ? 'beginner' : e === 'some' ? 'some' : 'enthusiast';
-    const scored = pool.map(item => {
-      let score = item[skillKey] + item[p];
-      if(s === 'milk' && item.kind === 'milk') score += 3;
-      if(s === 'espresso' && item.kind === 'espresso') score += 2;
-      if(s === 'filter' && item.kind === 'filter') score += 3;
-      if(b === 'under400' && item.price <= 300) score += 2;
-      if(b === 'over700' && item.price >= 500) score += 1;
-      return {item, score};
-    }).sort((a,b) => b.score - a.score || a.item.price - b.item.price);
-    return scored.slice(0,3).map(x => x.item);
+    function render(){
+      const picks=recommend();
+      const heading=document.querySelector('.finder-results-head h3');
+      const sub=document.querySelector('.finder-results-head p');
+      const styleText=style.options[style.selectedIndex].text;
+      grid.innerHTML=picks.map((x,i)=>'<article class="finder-result '+(i===0?'top-match':'')+'"><div class="match-tag">'+(i===0?'★ Mejor coincidencia':x.tag)+'</div><h4>'+x.name+'</h4><p>'+x.desc+'</p><div class="finder-why"><strong>Por qué aparece:</strong> '+x.reason+'</div><div class="finder-price">'+x.priceText+'</div><a href="'+x.url+'" target="_blank" rel="sponsored nofollow noopener noreferrer">'+x.label+' →</a></article>').join('');
+      heading.textContent=s==='filter'?'Tus opciones para café filtrado':'Tus recomendaciones de espresso';
+      sub.textContent='Selección basada en tus respuestas · '+styleText;
+      results.classList.remove('is-hidden'); results.classList.add('is-ready');
+      submit.textContent='Actualizar recomendaciones';
+      window.setTimeout(()=>results.scrollIntoView({behavior:'smooth',block:'start'}),80);
+    }
+    submit.addEventListener('click',render);
+    reset.addEventListener('click',()=>{budget.value='400to700';style.value='espresso';experience.value='beginner';priority.value='easy';results.classList.add('is-hidden');results.classList.remove('is-ready');grid.innerHTML='';submit.textContent='Mostrar mis recomendaciones';});
   }
-
-  function render(){
-    const picks = getRecommendations();
-    grid.innerHTML = picks.map((item,index) => `
-      <article class="finder-result">
-        <div class="match-tag">${index === 0 ? 'La opción que mejor coincide' : item.tag}</div>
-        <h4>${item.name}</h4>
-        <p>${item.desc}</p>
-        <div class="finder-price">${item.priceText}</div>
-        <a href="${item.url}" target="_blank" rel="sponsored nofollow noopener noreferrer">${item.retailerLabel}</a>
-      </article>`).join('');
-    const heading = document.querySelector('.finder-results-head h3');
-    if(heading) heading.textContent = style.value === 'filter' ? 'Tus molinos recomendados para café filtrado' : 'Tus cafeteras recomendadas';
-  }
-
-  submit.addEventListener('click', render);
-  reset.addEventListener('click', function(){
-    budget.value='400to700'; style.value='espresso'; experience.value='beginner'; priority.value='easy'; render();
-  });
-  render();
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
 })();
 </script>
 
