@@ -108,18 +108,20 @@
 </style>
 <script>
 (function(){
+  function showFallback(img){
+    if(!img || img.dataset.fallbackShown)return;
+    img.dataset.fallbackShown='1';
+    var fallback=document.createElement('div');
+    fallback.className='image-fallback';
+    var brand=document.createElement('span');brand.className='fallback-brand';brand.textContent='BREWCRAFT';
+    var name=document.createElement('strong');name.textContent=img.getAttribute('alt')||'Coffee equipment';
+    var note=document.createElement('small');note.textContent='Foto del producto no disponible temporalmente';
+    fallback.append(brand,name,note);
+    img.replaceWith(fallback);
+  }
   document.querySelectorAll('img').forEach(function(img){
-    img.addEventListener('error',function(){
-      if(img.dataset.fallbackShown)return;
-      img.dataset.fallbackShown='1';
-      var fallback=document.createElement('div');
-      fallback.className='image-fallback';
-      var brand=document.createElement('span');brand.className='fallback-brand';brand.textContent='BREWCRAFT';
-      var name=document.createElement('strong');name.textContent=img.getAttribute('alt')||'Coffee equipment';
-      var note=document.createElement('small');note.textContent='Product photo temporarily unavailable';
-      fallback.append(brand,name,note);
-      img.replaceWith(fallback);
-    },{once:true});
+    img.addEventListener('error',function(){showFallback(img);},{once:true});
+    if(img.complete && img.naturalWidth===0)showFallback(img);
   });
 })();
 </script>
