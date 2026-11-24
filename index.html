@@ -75,6 +75,19 @@
 .finder-result .finder-price{font:normal 20px Georgia,serif;margin-top:auto;margin-bottom:14px}
 .finder-result a{display:block;text-align:center;background:var(--green);color:white;padding:12px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .finder-note{font-size:10px;color:var(--muted);line-height:1.7;margin:16px 0 0}
+.finder-results.is-hidden{display:none}
+.finder-results{scroll-margin-top:24px}
+.finder-result{opacity:0;transform:translateY(12px);animation:finderRise .45s ease forwards}
+.finder-result:nth-child(2){animation-delay:.08s}.finder-result:nth-child(3){animation-delay:.16s}
+.finder-result.top-match{border-color:#9aa88f;box-shadow:0 10px 28px rgba(52,72,59,.10)}
+.finder-result.top-match .match-tag{display:inline-flex;align-items:center;gap:6px;background:#e7eee5;padding:7px 9px;align-self:flex-start}
+.finder-why{font-size:11px;line-height:1.6;background:#f0ece4;padding:11px 12px;margin:0 0 16px;color:#5f6259}
+.finder-result a{text-decoration:none;transition:background .2s,transform .2s}
+.finder-result a:hover{background:#526b58;transform:translateY(-2px)}
+#finder-submit{cursor:pointer;transition:transform .2s,background .2s}
+#finder-submit:hover{transform:translateY(-2px);background:#526b58}
+@keyframes finderRise{to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.finder-result{animation:none;opacity:1;transform:none}html{scroll-behavior:auto}}
 @media(max-width:850px){.finder-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.finder-result-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.finder-wrap{padding:56px 18px}.finder-panel{padding:20px}.finder-fields,.finder-result-grid{grid-template-columns:1fr}.finder-results-head{display:block}.finder-results-head p{margin-top:8px}}
 
@@ -155,16 +168,12 @@
         <button class="finder-reset" id="finder-reset" type="button">Reset choices</button>
       </div>
     </div>
-    <div class="finder-results" id="finder-results" aria-live="polite">
+    <div class="finder-results is-hidden" id="finder-results" aria-live="polite">
       <div class="finder-results-head">
         <h3>Your starting shortlist</h3>
         <p>Based on the preferences selected above</p>
       </div>
-      <div class="finder-result-grid" id="finder-result-grid">
-        <article class="finder-result"><div class="match-tag">Best value for learning espresso</div><h4>Breville Bambino</h4><p>A compact manual espresso machine to learn the fundamentals without taking over your counter.</p><div class="finder-price">Around $300</div><a href="https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Check price on Amazon</a></article>
-        <article class="finder-result"><div class="match-tag">Best for everyday milk drinks</div><h4>Breville Bambino Plus</h4><p>A compact option with automatic milk texturing for people who make milk drinks often.</p><div class="finder-price">Around $500</div><a href="https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Check price on Amazon</a></article>
-        <article class="finder-result"><div class="match-tag">Best for manual control</div><h4>Gaggia Classic Pro E24</h4><p>A traditional machine with a more hands-on workflow and room to develop your technique.</p><div class="finder-price">Around $550–$600</div><a href="https://www.gaggia.com/manual-machines/new-classic-e24/" target="_blank" rel="noopener noreferrer">View at Gaggia</a></article>
-      </div>
+      <div class="finder-result-grid" id="finder-result-grid"></div>
       <p class="finder-note">These are research starting points, not personalized testing results or guarantees. Prices and availability change. A capable grinder is also important for espresso; these machines do not include one.</p>
     </div>
   </div>
@@ -267,77 +276,41 @@
 
 <script>
 (function(){
-  const budget = document.getElementById('finder-budget');
-  const style = document.getElementById('finder-style');
-  const experience = document.getElementById('finder-experience');
-  const priority = document.getElementById('finder-priority');
-  const grid = document.getElementById('finder-result-grid');
-  const submit = document.getElementById('finder-submit');
-  const reset = document.getElementById('finder-reset');
-
-  const products = [
-    {name:'Breville Bambino', kind:'espresso', price:300, priceText:'Around $300', tag:'Best value for learning espresso', desc:'A compact manual machine with fast heat-up. Choose it if you want to learn espresso and are comfortable steaming milk yourself.', url:'https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20', retailerLabel:'Check price on Amazon', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:1, control:2, value:3},
-    {name:'Breville Bambino Plus', kind:'milk', price:500, priceText:'Around $500', tag:'Best for everyday milk drinks', desc:'Adds automatic milk texturing. Choose it if you regularly make cappuccinos or lattes and value convenience.', url:'https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20', retailerLabel:'Check price on Amazon', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:3, control:1, value:1},
-    {name:'Gaggia Classic Pro E24', kind:'espresso', price:575, priceText:'Around $550–$600', tag:'Best for hands-on espresso enthusiasts', desc:'A traditional single-boiler machine with a 58 mm portafilter. Choose it if you want a more involved manual workflow and room to develop your technique.', url:'https://www.gaggia.com/manual-machines/new-classic-e24/', retailerLabel:'View at Gaggia', linkRel:'noopener noreferrer', beginner:1, some:3, enthusiast:3, easy:0, control:3, value:2},
-    {name:'Breville Barista Express', kind:'milk', price:700, priceText:'Around $700', tag:'All-in-one option', desc:'Combines an espresso machine and built-in grinder, so you do not need to buy a separate grinder to get started.', url:'https://www.amazon.com/dp/B00CH9QWOU?tag=smartfin0e6fa-20', retailerLabel:'Check price on Amazon', linkRel:'sponsored nofollow noopener noreferrer', beginner:2, some:2, enthusiast:1, easy:2, control:1, value:2},
-    {name:'Fellow Opus Grinder', kind:'filter', price:200, priceText:'Around $200', tag:'Versatile grinder pick', desc:'A compact electric grinder to consider if you want one grinder for several brewing styles.', url:'https://www.amazon.com/dp/B0BV96VPSR?tag=smartfin0e6fa-20', retailerLabel:'Check price on Amazon', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:2},
-    {name:'Baratza Encore Grinder', kind:'filter', price:150, priceText:'Around $150', tag:'Filter coffee value pick', desc:'A straightforward burr grinder to consider for everyday drip and pour-over coffee.', url:'https://www.amazon.com/dp/B007F183LK?tag=smartfin0e6fa-20', retailerLabel:'Check price on Amazon', linkRel:'sponsored nofollow noopener noreferrer', beginner:3, some:2, enthusiast:1, easy:2, control:1, value:3}
-  ];
-
-  function getRecommendations(){
-    const b = budget.value, s = style.value, e = experience.value, p = priority.value;
-    let pool = products.filter(item => {
-      if(s === 'filter') return item.kind === 'filter';
-      if(s === 'milk') return item.kind === 'milk' || item.kind === 'espresso';
-      return item.kind === 'espresso' || item.kind === 'milk';
-    });
-    if(s !== 'filter'){
-      pool = pool.filter(item => {
-        if(b === 'under400') return item.price <= 400;
-        if(b === '400to700') return item.price >= 300 && item.price <= 700;
-        return item.price >= 500;
-      });
-    } else {
-      pool = pool.filter(item => {
-        if(b === 'under400') return item.price <= 400;
-        if(b === '400to700') return item.price <= 700;
-        return true;
-      });
+  function init(){
+    const budget=document.getElementById('finder-budget'), style=document.getElementById('finder-style');
+    const experience=document.getElementById('finder-experience'), priority=document.getElementById('finder-priority');
+    const grid=document.getElementById('finder-result-grid'), results=document.getElementById('finder-results');
+    const submit=document.getElementById('finder-submit'), reset=document.getElementById('finder-reset');
+    if(!budget||!style||!experience||!priority||!grid||!results||!submit||!reset) return;
+    const products=[
+      {name:'Breville Bambino',kind:'espresso',price:300,priceText:'Around $300',tag:'Best value for learning espresso',desc:'A compact manual machine with fast heat-up. A good fit if you want to learn espresso and steam milk yourself.',url:'https://www.amazon.com/dp/B0B1JPPG2L?tag=smartfin0e6fa-20',label:'Check price on Amazon',beginner:3,some:2,enthusiast:1,easy:1,control:2,value:3,reason:'A lower-cost way to learn the fundamentals of espresso.'},
+      {name:'Breville Bambino Plus',kind:'milk',price:500,priceText:'Around $500',tag:'Best for milk drinks',desc:'Adds automatic milk texturing for simpler cappuccino and latte preparation.',url:'https://www.amazon.com/dp/B07JVD78TT?tag=smartfin0e6fa-20',label:'Check price on Amazon',beginner:3,some:2,enthusiast:1,easy:3,control:1,value:1,reason:'Automatic milk texturing makes the daily routine easier.'},
+      {name:'Gaggia Classic Pro E24',kind:'espresso',price:575,priceText:'Around $550–$600',tag:'Best for hands-on control',desc:'A traditional single-boiler machine with a 58 mm portafilter and a more involved workflow.',url:'https://www.gaggia.com/manual-machines/new-classic-e24/',label:'View at Gaggia',beginner:1,some:3,enthusiast:3,easy:0,control:3,value:2,reason:'A hands-on machine for developing espresso technique.'},
+      {name:'Breville Barista Express',kind:'milk',price:700,priceText:'Around $700',tag:'All-in-one option',desc:'Combines an espresso machine and built-in grinder in one appliance.',url:'https://www.amazon.com/dp/B00CH9QWOU?tag=smartfin0e6fa-20',label:'Check price on Amazon',beginner:2,some:2,enthusiast:1,easy:2,control:1,value:2,reason:'Combines grinder and machine rather than requiring two purchases.'},
+      {name:'Fellow Opus Grinder',kind:'filter',price:200,priceText:'Around $200',tag:'Versatile grinder pick',desc:'An electric grinder to consider for several brewing styles.',url:'https://www.amazon.com/dp/B0BV96VPSR?tag=smartfin0e6fa-20',label:'Check price on Amazon',beginner:3,some:2,enthusiast:1,easy:2,control:1,value:2,reason:'A flexible electric option for different coffee methods.'},
+      {name:'Baratza Encore Grinder',kind:'filter',price:150,priceText:'Around $150',tag:'Best for filter coffee value',desc:'A straightforward burr grinder for everyday drip and pour-over coffee.',url:'https://www.amazon.com/dp/B007F183LK?tag=smartfin0e6fa-20',label:'Check price on Amazon',beginner:3,some:2,enthusiast:1,easy:2,control:1,value:3,reason:'A simple starting point for filter coffee.'}
+    ];
+    function recommend(){
+      const b=budget.value,s=style.value,e=experience.value,p=priority.value;
+      let pool=products.filter(x=>s==='filter'?x.kind==='filter':s==='milk'?x.kind==='milk'||x.kind==='espresso':x.kind!=='filter');
+      pool=pool.filter(x=>b==='under400'?x.price<=400:b==='400to700'?x.price>=300&&x.price<=700:x.price>=500);
+      if(!pool.length) pool=products.filter(x=>s==='filter'?x.kind==='filter':x.kind!=='filter');
+      return pool.map(x=>({item:x,score:x[e]+x[p]+(s==='milk'&&x.kind==='milk'?3:0)+(s==='espresso'&&x.kind==='espresso'?2:0)+(s==='filter'&&x.kind==='filter'?3:0)+(b==='under400'&&x.price<=300?2:0)+(b==='over700'&&x.price>=500?1:0)})).sort((a,b)=>b.score-a.score||a.item.price-b.item.price).slice(0,3).map(x=>x.item);
     }
-    if(!pool.length) pool = products.filter(item => s === 'filter' ? item.kind === 'filter' : item.kind !== 'filter');
-
-    const skillKey = e === 'beginner' ? 'beginner' : e === 'some' ? 'some' : 'enthusiast';
-    const scored = pool.map(item => {
-      let score = item[skillKey] + item[p];
-      if(s === 'milk' && item.kind === 'milk') score += 3;
-      if(s === 'espresso' && item.kind === 'espresso') score += 2;
-      if(s === 'filter' && item.kind === 'filter') score += 3;
-      if(b === 'under400' && item.price <= 300) score += 2;
-      if(b === 'over700' && item.price >= 500) score += 1;
-      return {item, score};
-    }).sort((a,b) => b.score - a.score || a.item.price - b.item.price);
-    return scored.slice(0,3).map(x => x.item);
+    function render(){
+      const picks=recommend(), heading=document.querySelector('.finder-results-head h3'), sub=document.querySelector('.finder-results-head p');
+      const styleText=style.options[style.selectedIndex].text;
+      grid.innerHTML=picks.map((x,i)=>'<article class="finder-result '+(i===0?'top-match':'')+'"><div class="match-tag">'+(i===0?'★ Best match':x.tag)+'</div><h4>'+x.name+'</h4><p>'+x.desc+'</p><div class="finder-why"><strong>Why it fits:</strong> '+x.reason+'</div><div class="finder-price">'+x.priceText+'</div><a href="'+x.url+'" target="_blank" rel="sponsored nofollow noopener noreferrer">'+x.label+' →</a></article>').join('');
+      heading.textContent=style.value==='filter'?'Your filter coffee shortlist':'Your espresso recommendations';
+      sub.textContent='Matched to your answers · '+styleText;
+      results.classList.remove('is-hidden');results.classList.add('is-ready');
+      submit.textContent='Update recommendations';
+      window.setTimeout(()=>results.scrollIntoView({behavior:'smooth',block:'start'}),80);
+    }
+    submit.addEventListener('click',render);
+    reset.addEventListener('click',()=>{budget.value='400to700';style.value='espresso';experience.value='beginner';priority.value='easy';results.classList.add('is-hidden');results.classList.remove('is-ready');grid.innerHTML='';submit.textContent='Show my recommendations';});
   }
-
-  function render(){
-    const picks = getRecommendations();
-    grid.innerHTML = picks.map((item,index) => `
-      <article class="finder-result">
-        <div class="match-tag">${index === 0 ? 'Closest match' : item.tag}</div>
-        <h4>${item.name}</h4>
-        <p>${item.desc}</p>
-        <div class="finder-price">${item.priceText}</div>
-        <a href="${item.url}" target="_blank" rel="${item.linkRel}">${item.retailerLabel}</a>
-      </article>`).join('');
-    const heading = document.querySelector('.finder-results-head h3');
-    if(heading) heading.textContent = style.value === 'filter' ? 'Your filter coffee shortlist' : 'Your espresso shortlist';
-  }
-
-  submit.addEventListener('click', render);
-  reset.addEventListener('click', function(){
-    budget.value='400to700'; style.value='espresso'; experience.value='beginner'; priority.value='easy'; render();
-  });
-  render();
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
 })();
 </script>
 
