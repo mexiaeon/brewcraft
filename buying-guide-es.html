@@ -100,4 +100,27 @@
 <section class="guide-block"><h2 class="section-title">Cómo elaboramos esta guía</h2><p>Las recomendaciones de Brewcraft se basan en especificaciones publicadas por los fabricantes, documentación de producto e investigación disponible en guías de compra al 23 de noviembre de 2026. No hemos probado personalmente todas las máquinas de esta selección, por lo que no presentamos estas recomendaciones como resultados de pruebas prácticas de laboratorio. Los precios y el inventario cambian; consulta la página del fabricante o vendedor para confirmar los detalles antes de comprar.</p><p class="note">Aviso de afiliación: Como asociado de Amazon, obtengo ingresos por compras que cumplen los requisitos. Algunos enlaces de esta página son enlaces de afiliados; esto significa que Brewcraft puede recibir una comisión si compras a través de ellos, sin costo adicional para ti. Esto no afecta nuestros criterios de selección.</p></section>
 </main>
 <footer class="footer"><div class="footer-inner"><div><a class="logo" href="index-es.html">BREW<span>CRAFT</span></a><p>Equipo bien pensado para preparar mejor café en casa.</p></div><div class="footer-links"><a href="index-es.html">Inicio</a><a href="index-es.html#guides">Más guías</a><a href="index-es.html#about">Nuestra metodología</a></div></div></footer>
+<style>
+.image-fallback{width:100%;min-height:220px;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;background:linear-gradient(145deg,#f0ede6,#e3ded3);border:1px solid #d8d1c4;color:#34483b;text-align:center}
+.image-fallback .fallback-brand{font:700 12px Georgia,serif;letter-spacing:.22em;color:#8a7658}
+.image-fallback strong{font:600 16px Georgia,serif;max-width:26ch}
+.image-fallback small{font:11px system-ui,sans-serif;color:#707169}
+</style>
+<script>
+(function(){
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('error',function(){
+      if(img.dataset.fallbackShown)return;
+      img.dataset.fallbackShown='1';
+      var fallback=document.createElement('div');
+      fallback.className='image-fallback';
+      var brand=document.createElement('span');brand.className='fallback-brand';brand.textContent='BREWCRAFT';
+      var name=document.createElement('strong');name.textContent=img.getAttribute('alt')||'Coffee equipment';
+      var note=document.createElement('small');note.textContent='Product photo temporarily unavailable';
+      fallback.append(brand,name,note);
+      img.replaceWith(fallback);
+    },{once:true});
+  });
+})();
+</script>
 </body></html>
