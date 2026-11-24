@@ -74,16 +74,15 @@
 @media(max-width:850px){.finder-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.finder-result-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.finder-wrap{padding:56px 18px}.finder-panel{padding:20px}.finder-fields,.finder-result-grid{grid-template-columns:1fr}.finder-results-head{display:block}.finder-results-head p{margin-top:8px}}
 
+
+.language-switch{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid #d8d2c6;border-radius:999px;background:#f4f1e9;white-space:nowrap;flex-shrink:0;margin:0 18px 0 auto;font:600 10px/1 system-ui,sans-serif;letter-spacing:.08em}.language-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:32px;padding:8px 9px;border-radius:999px;text-decoration:none;color:#596257;transition:background .2s,color .2s}.language-switch a.active{background:#34483b;color:#fff}.language-switch a:not(.active):hover{background:#e5dfd3;color:#26382d}@media(max-width:760px){.language-switch{margin-left:auto;margin-right:0}}
 </style>
 </head>
 <body>
 <div class="topbar">Buen equipo. Mejor café. Sin complicaciones.</div>
-<header class="nav">\n  <a class="lang-switch" href="index.html">English</a> / <strong>Español</strong>
-  <a class="logo" href="#">BREW<span>CRAFT</span></a>
-  <nav class="navlinks"><a href="#machines">Cafeteras espresso</a><a href="#compare">Comparar cafeteras</a><a href="#finder">Encuentra tu equipo</a><a href="#grinders">Molinos</a><a href="#guides">Guías de compra</a><a href="#about">Nuestra metodología</a></nav>
+<header class="nav"><a class="logo" href="#">BREW<span>CRAFT</span></a><div class="language-switch" aria-label="Choose language"><a href="index.html" class="" lang="en">EN</a><a href="index-es.html" class="active" lang="es">ES</a></div><nav class="navlinks"><a href="#machines">Cafeteras espresso</a><a href="#compare">Comparar cafeteras</a><a href="#finder">Encuentra tu equipo</a><a href="#grinders">Molinos</a><a href="#guides">Guías de compra</a><a href="#about">Nuestra metodología</a></nav>
   <a class="nav-cta" href="#guides">Explora las guías</a>
-  <button class="mobile-menu" aria-label="Menu" onclick="document.querySelector('.navlinks').style.display=document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
-</header>
+  <button class="mobile-menu" aria-label="Menu" onclick="document.querySelector('.navlinks').style.display=document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button></header>
 <main>
 <section class="hero">
   <div>
