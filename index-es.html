@@ -305,6 +305,7 @@
       return pool.map(x=>({item:x,score:x[e]+x[p]+(s==='milk'&&x.kind==='milk'?3:0)+(s==='espresso'&&x.kind==='espresso'?2:0)+(s==='filter'&&x.kind==='filter'?3:0)+(b==='under400'&&x.price<=300?2:0)+(b==='over700'&&x.price>=500?1:0)})).sort((a,b)=>b.score-a.score||a.item.price-b.item.price).slice(0,3).map(x=>x.item);
     }
     function render(){
+      const s=style.value;
       const picks=recommend();
       const heading=document.querySelector('.finder-results-head h3');
       const sub=document.querySelector('.finder-results-head p');
